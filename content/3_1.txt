@@ -1,0 +1,44 @@
+@section 3.1 | How far is the airport? | Introduction to metrics | You'll discover that "distance" is a choice, and that a circle can be a square.
+@scene Tuesday, early. Jim is dragging a suitcase down the drive and arguing with his phone.
+J: Neighbour! Settle something. How far is the airport?
+N: Good morning to you too. Why?
+J: My phone says 18 kilometres. My brother says "it's only 11 as the crow flies". And the taxi driver says "forty minutes". Three answers. Somebody's lying.
+N: Nobody's lying. They're measuring three different distances.
+J: There's only one distance. It's... how far it is.
+N: Is it? You're not a crow. Let me draw our town. It's a grid, like Chandigarh: straight roads, square blocks.
+@fig three | Three honest answers to "how far?". The crow flies straight. The taxi must follow the roads. A chess king may also cut diagonally through each block. Each one is a different way of measuring distance.
+N: The crow goes straight: Pythagoras gives about 6.7 blocks. The taxi has to go along the roads, so it's the blocks across plus the blocks up: 9. And if you were a chess king, allowed to cut diagonally through a block in one move, it's 6 moves.
+J: The king's cheating.
+N: The king's just playing by different rules. Let's give these three their own names: `crow(A,B)`, `taxi(A,B)` and `king(A,B)`. Each takes two places and gives back a number. Each is a perfectly good distance, for somebody.
+J: Fine. But then is anything a distance? Could I say the distance to the airport is "blue"?
+N: That's exactly the right question: what must something do to deserve the name? Let's find out the way we found the rules for vectors. You try to break it.
+J: Right. Distance can't be negative.
+N: Agreed. What's the distance from your house to your house?
+J: Zero. And if the distance between two places is zero, they're the same place.
+N: Rule one: never negative, and zero only from a place to itself. Next?
+J: Home to the airport is the same as the airport to home.
+N: Is it? What about the taxi's forty minutes, and the ride home in rush hour?
+J: ...Ninety minutes. Fine, time isn't symmetric. And one-way streets would make the road distance lopsided too.
+N: Mathematicians insist on it anyway: rule two says the distance from A to B equals the distance from B to A. Anything lopsided, like travel time, is a cousin with its own name, not a true distance. And the third rule is the deepest. Say you stop at a friend's house on the way to the airport.
+J: Then it's longer. Or at best the same, if my friend lives right on the way.
+N: That's rule three: ==a detour can never be a shortcut.== Home to the airport is never longer than home to your friend's plus your friend's to the airport. It's called the ==triangle inequality==, because the three places make a triangle and one side can never be longer than the other two put together.
+@fig triangle | Left: the triangle inequality, which says the direct route is never longer than a detour. Right: airline prices break it. Two separate tickets via Dubai can cost less than one direct ticket, so ticket price, whatever else it is, isn't a distance.
+J: Ha! Flights break it. Delhi to London direct is sixty thousand rupees, but Delhi to Dubai and then Dubai to London on separate tickets comes to forty-two.
+N: Which is precisely why "price" isn't a distance, however much it feels like one. Airlines break the triangle inequality all the time, and people have made careers out of exploiting it.
+@side The whole rulebook | A distance (mathematicians say a ==metric==) is any way of giving two things a number such that: it's never negative, and zero only between a thing and itself; A to B equals B to A; and a detour is never a shortcut. That's all. Anything that obeys these three rules gets to be called a distance, and every theorem about distance then works for it.
+J: So crow, taxi and king all pass?
+N: All three. Now here's a puzzle for you. What's a circle?
+J: All the points the same distance from the centre.
+N: Say distance 3. Draw me the taxi's circle: all the corners of the grid that are exactly three blocks away by road.
+@pause Try it on squared paper. Start at a dot, and mark every dot you can reach in exactly three blocks of taxi driving. What shape do the marks make?
+J: Three across... two across and one up... one across and two up... three up... It's a diamond! A square standing on its point!
+N: And the king's circle?
+J: The king reaches anything within three squares in any direction... so it's a square, lying flat.
+@fig circles | "All the points at distance 1 from the centre", drawn three ways. The crow's circle is round. The taxi's is a diamond. The king's is a square.
+N: So what a "circle" looks like depends entirely on how you measure distance. The crow's circle is only one of many.
+J: Then when someone says "circle", they're secretly assuming a crow.
+N: Almost always. And that's the point of this chapter: ==before you ask "how far?", ask "far in what sense?"== Pick the distance that fits your problem. The taxi's is the right one for a delivery driver, the king's for a chessboard or a warehouse robot that can move both ways at once, the crow's for a helicopter.
+@name Metric | A way of measuring distance that is never negative, is the same both ways, and never lets a detour be a shortcut.
+J: The robot moves both ways at once. Mine uses the king's distance!
+N: Yours called Bruno a wolf, so I'd keep it away from warehouses.
+@unlock Distance is a choice | A metric is any rule for "how far" that is never negative, symmetric, and obeys the triangle inequality. Different problems need different metrics, and even the shape of a circle depends on which one you pick.

@@ -1,0 +1,36 @@
+@section 4.3 | Where the future goes | Where eigenvectors take us | You'll see why rabbits, Google and wobbly bridges are all run by eigenvalues.
+@scene Sunday. Jim's nephew has been given two rabbits. Jim is doing sums on the back of an envelope, looking worried.
+J: The pet shop says a pair of rabbits has a new pair every month, starting from their second month. How many will there be by Christmas?
+N: That's the oldest puzzle in this business. Leonardo of Pisa, whom we call Fibonacci, posed it in 1202. Count the pairs month by month.
+J: 1, 1, 2, 3, 5, 8, 13, 21... each month is the last two added together.
+N: Now divide each month by the month before.
+@fig fibonacci | Divide each month's rabbits by the month before, and the answer quickly settles at 1.618..., the golden ratio. That's the eigenvalue of the rabbit rule.
+J: 2, 1.5, 1.67, 1.6, 1.625... it's settling down. About 1.618.
+N: The golden ratio. And here's why. The rabbit rule is a transformation: it takes this month's (adults, babies) and gives next month's. Apply it over and over...
+J: ...and, like the pizza, everything swings towards its strongest eigenvector. So in the long run the population just gets multiplied by the biggest eigenvalue every month. That's the 1.618!
+N: You've got it. ==When the same change happens again and again, the future belongs to the biggest eigenvalue.== Populations, compound interest, epidemics, the spread of a rumour: in the long run, the biggest eigenvalue says how fast it grows, and its eigenvector says what the mix looks like.
+J: Please tell me the rabbits have a smaller eigenvalue.
+N: Sorry, Jim. By Christmas you'll be well into the hundreds. Now, the most valuable eigenvector in history. How did Google decide which web pages matter?
+J: Counting links? Pages lots of other pages link to?
+N: Close, but anyone can make a thousand junk pages all linking to one. Larry Page and Sergey Brin had a better idea. Imagine a bored surfer clicking random links forever. Every so often he gets bored and jumps to a random page. Where does he spend most of his time?
+J: On pages that lots of pages link to... especially pages that important pages link to.
+N: And "where he spends his time in the long run" is what?
+J: Something that doesn't change when he takes one more click... Oh. It's an eigenvector! The one with eigenvalue 1.
+@fig pagerank | A tiny web of five pages. The random surfer's long-run share of time on each page is the eigenvector of the "one more click" rule. Page C wins because important pages point to it.
+N: That's PageRank, the idea Google started with in 1998: rank every page on the web by that eigenvector, found by clicking again and again, which is the lazy method from yesterday. For a while, Google was essentially one enormous eigenvector.
+J: A search engine built on the pizza trick.
+N: One more, and it brings us back to your Ducati. Remember the frame's "favourite speeds", its natural frequencies?
+J: The buzz at four thousand rpm.
+N: A frame, a bridge or a guitar string has special shapes it can vibrate in without changing shape, just swinging bigger and smaller. Those shapes are eigenvectors, and their natural frequencies come straight from the eigenvalues.
+@fig modes | A guitar string's three simplest ways to vibrate. Each keeps its shape as it swings: an eigenvector of the string. Their frequencies, in the ratio 1 : 2 : 3, are the harmonics from Chapter 1.
+J: So the harmonics were eigenvectors all along!
+N: The whole of Chapter 1 was sitting on this. Pure waves are the eigenvectors of vibration, and of every echo, filter and loudspeaker too. That's why they're so useful: they pass through such systems without changing shape.
+J: What happens if you get the eigenvalues wrong?
+N: Ask London. On 10 June 2000, the Millennium Bridge opened across the Thames. Thousands of people walked on to it, and it began to sway sideways. People felt it move and, without meaning to, fell into step with it, which pushed it further. It closed two days later and reopened in 2002, after engineers fitted dampers.
+J: Pushing the swing in rhythm. With your feet.
+N: And the list of a system's eigenvalues has a name you already know: its ==spectrum==. The same word as the rainbow, and as the list of hands in a song.
+@name Spectrum (again) | The set of a system's eigenvalues. For anything that vibrates, it's the list of its natural frequencies.
+J: Everything keeps connecting.
+N: That's how you know you're learning mathematics and not just memorising it. Next week I'll need your mattress.
+J: My what?
+@unlock The future belongs to the biggest eigenvalue | Repeat any change and the strongest eigenvector takes over, growing by the biggest eigenvalue each time. That runs population growth, Google's PageRank, and every natural frequency, from guitar strings to wobbling bridges.

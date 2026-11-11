@@ -1,0 +1,34 @@
+@section 7.1 | Why the yelling seems to work | Introduction to regression to the mean | You'll see why praise seems to backfire and criticism seems to work, and why neither is true.
+@scene Saturday. Jim is back from his son's football match, hoarse.
+J: Our coach has a theory. When the boys play badly, he yells at them, and next week they play better. When they play brilliantly, he praises them, and next week they're worse. So he's stopped praising.
+N: And he's sure it's cause and effect?
+J: He's watched it for years. It happens every time.
+N: Then here's a question. What if he'd said nothing at all?
+J: Then... I don't know. Nothing would change?
+N: I think exactly the same pattern would happen, with no yelling and no praise. Let me show you. Any single performance is two things added together: ==skill==, which carries over from week to week, and ==luck==, which doesn't. The bounce of the ball, the wind, the ref, a good night's sleep.
+J: Fair enough.
+N: Now, when do the boys have their worst game of the season?
+J: When they're off form...
+N: And?
+J: ...and when they're unlucky. The worst game is the one where bad luck piled on top of everything else.
+N: So a truly awful game was almost certainly an unlucky one. What happens to that bad luck next week?
+J: It doesn't carry over. Next week their luck is just... average. So they play better. Yelling or no yelling.
+N: And the best game of the season?
+J: Good form plus good luck. Next week the luck's gone, so they're worse, praise or no praise. The coach is taking credit for the luck running out!
+N: That's it. It's called ==regression to the mean==: after an extreme result, the next one is usually closer to average, simply because the extreme was partly luck.
+@fig skillluck | The twelve top scorers out of four hundred, with each score split into skill (green) and luck (yellow). Almost all of them were lucky as well as good. Next time, the luck won't be there.
+J: Can you prove it's not the yelling?
+N: Let's try it with a class where there's no skill at all. A hundred people each flip ten coins and count the heads. We take the ten worst "flippers" and tell them off. We take the ten best and praise them. Then everyone flips again.
+@pause What do you expect the ten worst to score in round two? And the ten best?
+@fig coinclass | A hundred people flip ten coins each, twice. The ten worst in round one "improve" to about 5 heads after being told off. The ten best "get lazy" and drop to about 5. It's coins: nobody improved and nobody got lazy.
+J: The worst ones jump up to about five, and the best ones drop to about five. But it's coins! There's nothing to improve!
+N: Every coach, manager and parent who has ever sworn by shouting has been fooled by this. The psychologist Daniel Kahneman told the story of Israeli air force flight instructors who were sure that praising a good landing made the next one worse. He realised they were watching regression to the mean.
+@side The cover jinx | Athletes who appear on the cover of Sports Illustrated often have a worse season afterwards, and fans call it a jinx. But you only get on the cover after an extraordinary run, which is part skill and part luck. The jinx is the luck running out.
+J: Where else does this happen?
+N: Everywhere somebody picks the extremes. A company sacks its worst-performing sales team, and next quarter the replacements do better. A town puts speed cameras at the junctions with the most crashes last year, and next year there are fewer crashes. A patient tries a remedy on the day their back pain is at its worst, and the next day it's better.
+J: Because people go to the doctor when they feel worst, and "worst" is partly bad luck...
+N: ...so they'd usually have improved anyway. That's why new medicines are always tested against a group that doesn't get them. You're getting good at this.
+J: So how do I tell the coach he's wrong without getting yelled at myself?
+N: Tomorrow I'll give you the numbers. And the surprising origin of the most-used word in statistics.
+@name Regression to the mean | After an extreme result, the next one tends to be closer to average, because the extreme was partly luck.
+@unlock Extremes are partly luck | Every result is skill plus luck. Pick out the extremes and you've also picked out extreme luck, which won't repeat. So the worst improve and the best decline, whatever you do to them. Before crediting a cause, ask whether you picked the extremes.

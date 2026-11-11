@@ -1,0 +1,32 @@
+@section 4.1 | The directions that don't turn | Introduction to eigenvectors and eigenvalues | You'll find the hidden "grain" inside any stretch, squash or shove.
+@scene Friday night. Jim's kitchen. There is flour on the ceiling.
+J: I'm making pizza. I drew a smiley face on the dough in tomato sauce, for morale.
+N: Perfect. Roll it once, only forwards and back, left to right.
+J: The smiley's gone fat. Wide eyes, wide grin.
+N: Now imagine you'd drawn little arrows on the dough first, pointing out from the middle in every direction, like the spokes of a wheel. What happened to them?
+@pause Picture the spokes before and after rolling left to right. Which of them still point the same way afterwards?
+J: The ones pointing left and right just got longer. The ones pointing straight up and down... stayed the same. And the slanted ones, the diagonals, got dragged round towards left-right. They turned.
+N: So almost every arrow turned. Except two directions.
+@fig dough | One roll stretches the dough to twice its width. The grey arrows all turn towards the rolling direction. The coral arrows (along the roll) only get longer, and the teal ones (across it) don't change at all. Those two directions are the dough's own.
+J: Along the roll and across it.
+N: Those are the dough's special directions. Along the roll, arrows get stretched by 2. Across it, stretched by 1, which means left alone. Everything else is a mixture of the two, and that's why it turns: its left-right part doubles, its up-down part doesn't, so it swings towards left-right.
+J: So the stretch has a grain, like wood.
+N: That's a lovely way to put it. Every stretch, squash or shove has a grain: directions it only lengthens or shortens, never turns. They're called ==eigenvectors==, and the amount each one is stretched by is its ==eigenvalue==.
+J: Eigen?
+N: German, like your robot's manuals. It means "own". These are the transformation's own directions. Now, a harder one. Take a deck of cards and push the top sideways, so the stack leans over.
+@fig shear | A stack of cards pushed sideways. An arrow along the table (coral) never turns. An arrow pointing up the stack (grey) leans over. This kind of shove, called a shear, has only one special direction.
+J: An arrow flat along the table stays put. An arrow pointing up the stack leans over with it. And the diagonals lean too... so only one special direction?
+N: Only one. Some transformations have two, some have one. Now a quarter-turn of my watch face: every arrow rotates by ninety degrees.
+J: Then every arrow turns. There are no special directions at all!
+N: None that you can draw. Hold that thought, though, because a quarter-turn is the spinning hand from Chapter 1, and it does have special directions if you're willing to use complex numbers. They're exactly the spinning hands.
+J: So spinning hands are the grain of spinning.
+N: Beautifully put. Let me show you why anyone should care. Take your phone and throw it up spinning, in three different ways.
+@try Spin a phone three ways | Over a bed, please. Toss your phone spinning end over end around its long axis: it spins cleanly. Spin it flat, like a pizza: also clean. Now spin it around the middle axis, the one that goes across the screen from side to side. It wobbles and flips over, every single time.
+J: Oh, that's bizarre! Twice it spins nicely, and around the middle it tumbles.
+@fig phone | Every solid object has three special axes, the eigenvectors of how its weight is spread out. It spins cleanly about the longest and the shortest of them, and tumbles about the one in between.
+N: Every object, however lumpy, has exactly three special axes: the eigenvectors of how its mass is spread out. Spin it about the longest or shortest, and it spins steadily. Spin it about the middle one, and it's unstable. It's called the tennis racket theorem.
+@note In 1985 the cosmonaut Vladimir Dzhanibekov watched a wing nut spinning in zero gravity flip over again and again. It's the same effect.
+J: So the eigenvectors are the directions where a thing behaves simply.
+N: That's exactly it. In any complicated transformation, look for the directions it doesn't turn. Along those, it's just a stretch, and a stretch is the simplest thing in the world.
+@name Eigenvector | A direction a transformation doesn't turn, only stretches. The stretch factor is its eigenvalue.
+@unlock The grain of a transformation | Most arrows turn when you transform them. The few that only stretch (eigenvectors) reveal the transformation's grain, and the stretch factors (eigenvalues) tell you how strong it is in each direction.

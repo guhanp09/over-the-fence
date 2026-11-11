@@ -1,0 +1,32 @@
+@section 5.3 | The power of impossibility | Parity, puzzles and proofs | You'll prove a famous puzzle can't be solved, without making a single move.
+@scene Tuesday. Jim has found a sliding-tile puzzle at a jumble sale, and has been at it for three hours.
+J: It's the 15 puzzle. Fifteen numbered tiles, one gap. Somebody before me prised two tiles out and put them back swapped, 14 and 15. I can't fix it.
+N: You can't. Nobody can.
+J: How do you know? You haven't even tried.
+N: That's the point. In 1880 America went mad for this puzzle. It was said that the puzzle-maker Sam Loyd offered a thousand dollars to anyone who could swap just the 14 and 15. Nobody ever collected, and nobody ever will. Let me show you why, without touching a tile.
+@fig fifteen | Left: the solved puzzle. Right: the same puzzle with 14 and 15 swapped. No sequence of slides, however long, gets from one to the other.
+N: Colour the board like a chessboard. Every slide moves the gap to a neighbouring square. What colour is that square?
+J: The other colour. Always.
+N: So after one slide the gap is on the other colour, after two slides it's back on its own colour... For the gap to end up back in its home corner, how many slides must you make?
+J: An even number. Otherwise it would be on the wrong colour.
+@fig checker | Every slide moves the gap to the other colour, so it can only come home after an even number of slides. And every slide is a swap.
+N: Now, every slide is a swap: the gap swaps places with a tile. So any sequence that brings the gap home is an even number of swaps.
+J: And swapping 14 and 15 is just one swap. Odd.
+N: But could an even number of swaps somehow add up to a single swap?
+J: I don't know. Could it?
+N: Here's the trick. Write the tiles out in order and count how many pairs are the wrong way round. Every single swap changes that count by an odd number: it either creates or destroys an odd number of wrong-way pairs. So an even number of swaps always changes it by an even amount.
+J: And a single swap of 14 and 15 changes it by one, which is odd. So you can't get there with an even number of swaps. It's impossible!
+N: That's the proof. Every arrangement is either "even" or "odd", and no amount of sliding changes which. Mathematicians call it ==parity==. Half of all the arrangements of the 15 puzzle can never be reached from the solved one, and two Americans, William Johnson and William Story, proved it in 1879.
+@name Parity | Whether an arrangement takes an even or odd number of swaps to reach. Sliding can never change it.
+J: So I've wasted three hours.
+N: You've learned the best thing group theory teaches: ==sometimes the most useful thing you can know is that something is impossible.== It saves you a lifetime of trying.
+@side A Rubik's cube in pieces | A Rubik's cube has about 43 quintillion positions. But if you take one apart and snap it back together at random, there's only a 1 in 12 chance it can be solved at all. A twisted corner, a flipped edge or a single swapped pair each put it into a part of the group that turning can never reach. Group theory tells you exactly which.
+J: What else is impossible?
+N: Some of the most famous results in mathematics are impossibilities. The Greeks spent centuries trying to cut any angle into three equal parts with a ruler and compass; it can't be done. There are formulas for solving equations up to x to the fourth power, but none for the fifth. Niels Abel proved that, and a young Frenchman, Évariste Galois, used groups to explain exactly which equations can be solved and why. He was dead in a duel at twenty.
+J: At twenty!
+N: He spent the night before writing his ideas down. Groups began, more or less, with his letters.
+J: So a group is really a way of listing what you can do, and working out from the rules what you can't.
+N: And the same idea runs chemistry, where the symmetry groups of molecules predict which light they absorb, and physics, where every symmetry of nature comes with something that's conserved. Emmy Noether proved that around 1915: because the laws of physics are the same today as tomorrow, energy is conserved.
+J: Symmetry gives you conservation?
+N: It's one of the most beautiful facts in science. But that's a story for another fence. Next, something more urgent. How sure should you be about anything?
+@unlock Knowing what's impossible | Every arrangement has a parity, even or odd, that moves may never change. That proves the swapped 15 puzzle is hopeless and a randomly rebuilt Rubik's cube is solvable only 1 time in 12. Symmetry is structure, and structure tells you what can never happen.

@@ -1,0 +1,65 @@
+@section 1.2 | A song is one wiggly line | From circles to sound | You'll see a whole song as one wiggly line, and hear it as an orchestra of circles.
+@scene Wednesday. Jim is on his porch with a guitar, playing the same four chords he always plays.
+N: Evening, Jim. Still those four chords?
+J: They're good chords. And you owe me something: you said circles are hiding in sound. I've been staring at this guitar for an hour. No circles.
+N: Then let's go and find them. Remember the watch hand? Shine a torch at it from the side, so the hand's shadow falls on the wall.
+J: The shadow's just a line on the wall.
+N: Watch the tip of the shadow as the hand turns.
+J: It goes up... slows down at the top... comes down... slows at the bottom... up again. Up and down, smoothly, forever.
+N: Now pin a strip of paper to the wall and pull it sideways at a steady speed while a pen follows the shadow's tip.
+@fig shadow | A spinning hand, seen edge-on, is a wave. Pull paper past its shadow at a steady speed and the up-and-down motion unrolls into the smoothest wave there is.
+J: A wave. The circle turned into a wave.
+N: The circle is the wave, seen from the side. Whenever you see that smooth up-and-down curve, there's a spinning hand behind it, whether you can see it or not. Mathematicians call it a ==sine wave==; I'll call it a pure wave.
+@note Heart monitors and seismographs work this way: a pen that only moves up and down, over paper that scrolls at a steady speed.
+J: Then two stacked hands would give a wobblier wave. The flower's shadow.
+N: Exactly. Now, your guitar. When you pluck a string, what actually reaches my ear?
+J: Sound.
+N: Which is?
+J: ...air wobbling?
+N: Air being pushed and pulled, very fast. Your eardrum moves in when the pressure rises and out when it falls. A loudspeaker does the same in reverse: a cone that moves in and out. And here's the thing I'd like you to sit with. At every instant, the only thing a loudspeaker needs to know is how far out its cone should be. One number. Then the next instant, another number.
+J: One number at a time... so a song is just a list of positions over time.
+N: Draw them on scrolling paper and you get one wiggly line. ==Your favourite song, with every instrument, the singer's breath and the crowd, is a single wiggly line.==
+J: No. The whole thing? The drums and the bass and the vocals, all in one line?
+N: All in one line. An old vinyl record is exactly that: one long spiral groove whose wiggles are the song. The needle rides the wiggles and the speaker copies them.
+@note Stereo records cut two wiggly lines, one into each wall of the same groove: one for each ear.
+J: Then how do I hear a drum and a voice as separate things, if it's one line?
+N: That's the question this whole chapter is really about. Let's build a chord, and you'll see.
+@fig chord | Three musicians, each playing one pure wave, add up to a single wiggly line: a major chord. Nothing in the bottom line tells you it's made of three parts, and yet it is.
+N: Three pure waves, spinning at speeds in the ratio 4 to 5 to 6. Add them up moment by moment, which is exactly what the air does when three strings sound at once, and you get the bottom line.
+J: It doesn't look like anything. It looks like a heart monitor having a bad day.
+N: And yet your ear hears three notes in it, instantly. Now turn it around. Suppose I hand you any wiggly line, say a recording of a full orchestra. Is there a set of pure waves that adds up to it?
+J: Well, a pure wave is a spinning hand seen from the side, and yesterday you said stacked hands can draw anything that repeats...
+N: Keep going.
+J: So yes: any wiggly line is a pile of pure waves. Like an orchestra where each musician can only play one pure note, at one loudness, the whole time. Give each one the right note and the right loudness, put enough of them together and... even though none of them understands what they're playing, the collective result is the song.
+@quote Even though none of them understands what they're playing, the collective result is the song.
+N: That's exactly it. You've just described a Fourier series better than most textbooks do. Each of your musicians has three dials. How fast their hand spins sets the pitch: physicists call that the ==frequency==. How long their hand is sets the loudness: the ==amplitude==. And where their hand starts is called the ==phase==.
+J: Does "where it starts" matter? It's the same note.
+N: For a steady note your ear is famously relaxed about it. Shuffle the starting points and the shape of the wiggly line changes completely, but it sounds almost the same. For drawings, it matters enormously: start the hands of that musical note at different angles and you'd get a scribble.
+@beat Jim plays an A. Badly, then less badly.
+N: That string goes back and forth 110 times a second, so the wiggly line repeats 110 times a second. What does yesterday's rule tell us about the hands?
+J: Every hand has to come home at the end of each repeat. So they have to spin a whole number of times per repeat: 110 times a second, 220, 330, 440...
+N: Those are the ==harmonics==. The slowest one, the 110, sets the pitch you hear. The others, and how long each one is, set the character of the sound. So why do you think a flute and a violin playing the same A sound nothing alike?
+J: Different recipes! Same slowest hand, different amounts of the others.
+@fig timbre | Same note, different recipe. A flute's wave is nearly one pure hand. A violin's sharp, buzzy wave hides a long tail of strong harmonics. The bars show how long each hand is.
+N: Musicians call that recipe the ==timbre==. You can even hear the hands on your own guitar.
+@try Hear a hidden harmonic | Rest a fingertip lightly on a guitar string, without pressing, exactly above the 12th fret (the halfway point), and pluck. The slowest hand needs the middle of the string to swing, so your finger silences it. What's left is the next hand: a clear, bell-like note an octave higher.
+J: Oh, that's pretty. A little bell.
+N: You just silenced one musician with a fingertip and heard the one standing behind him. Now let me show you why any of this is useful. Last night I recorded a voice note for my sister. Halfway through, Bruno had opinions.
+J: He does that.
+N: The recording is one wiggly line: my voice and Bruno, added together. You can't cut Bruno out with scissors; he's woven through every moment of it. But break the line into its hands, and my voice and his bark mostly live in different places. My voice is a low hand plus its tidy harmonics. A bark is a sudden, sharp burst of higher hands.
+J: So you find Bruno's musicians and tell them to stop playing. Then play the rest.
+N: And the bark is gone. In practice we do it slice by slice, a twentieth of a second at a time, because a bark comes and goes. Line up all the slices and you get a picture like this.
+@fig spectrogram | A spectrogram: time runs left to right, pitch runs up, and brightness shows how long each hand is. My voice is the neat stack of harmonics; Bruno's barks are the bright vertical smears. Silence those, and the recording comes back clean. (A made-up recording, built to show the idea.)
+J: That looks like sheet music.
+N: It is sheet music, written by the sound itself. Noise-reducing microphones, hearing aids and every music-editing app are built on pictures like this.
+@note Shazam recognises a song from the pattern of the brightest points in exactly this kind of picture: a fingerprint made of hands.
+J: Does light have hands too?
+N: Newton showed it in the 1660s with a prism. White light goes in, a rainbow comes out. A prism is a glass machine for sorting light's hands by speed: the slow ones come out red, the fast ones violet. He called the rainbow a ==spectrum==, and we still use his word for any list of hands and their lengths, sound included.
+@name Spectrum | The list of hands (frequencies) inside a thing, and how long, loud or bright each one is.
+J: So the chord, the violin, my voice note, a rainbow: they're all orchestras of spinning hands.
+N: All of them. But we've been cheating. I've been telling you which hands are inside. If I gave you only the wiggly line, how would you find them?
+J: Can't you just look at it?
+N: Can you look at a smoothie and tell me the recipe?
+J: ...No.
+N: Then tomorrow we'll build a machine that can. And, spoiler: you already own one.
+@unlock Waves are circles seen side-on | Any sound is one wiggly line, and any repeating wiggly line is an orchestra of pure waves. Each has a speed (pitch), a length (loudness) and a start (phase). The slowest hand sets the note; the rest set its character.

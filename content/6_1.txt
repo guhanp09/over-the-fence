@@ -1,0 +1,33 @@
+@section 6.1 | Car alarms and rare diseases | Introduction to Bayes' theorem | You'll learn to tell how much a piece of evidence should really change your mind.
+@scene 2 a.m. A car alarm is wailing somewhere down the street. Neither neighbour moves.
+J: (from his window) Is that yours?
+N: No idea. Go back to sleep.
+J: Shouldn't we check? Somebody might be stealing a car.
+N: When did you last hear a car alarm that was an actual theft?
+J: ...Never. They go off when a cat walks past. Or a lorry.
+N: So you heard an alarm, which is evidence of a theft, and you didn't budge. Why?
+J: Because thefts are rare and false alarms are common. So an alarm is almost always a false one.
+N: Congratulations. You've just used ==Bayes' theorem== in your pyjamas, without a single number. Tomorrow I'll show you a case where your instincts get it badly wrong.
+@beat The next morning.
+N: Here's the puzzle. There's a disease that 1 in 100 people have. There's a test for it. If you have the disease, the test catches it 9 times out of 10. If you don't, it wrongly says you do 1 time in 10. You take the test. It's positive. What's the chance you have the disease?
+@pause Make a guess before you read on. Most people, including many doctors, say about 90%.
+J: The test is right 9 times out of 10... so about 90%?
+N: That's what most people say, including, in surveys, most doctors. The real answer is about 8%.
+J: That's impossible.
+N: Let's not use percentages at all. Picture a crowd of a thousand people.
+@fig crowd | A thousand people. Ten have the disease (coral): the test catches 9 of them and misses 1. Of the 990 healthy people, the test wrongly flags about 99 (yellow). Count the positives.
+N: One in a hundred has it, so ten people in the crowd are ill. The test catches nine of them.
+J: Nine positives.
+N: And 990 are healthy. The test wrongly flags one in ten of them.
+J: That's 99 false alarms! So 9 plus 99 is 108 positive results, and only 9 of those people are ill.
+@fig positives | Everyone who tested positive, lined up. Only 9 of the 108 are ill. A positive test means about a 1 in 12 chance, not 9 in 10.
+N: So if you're one of the 108, your chance of being ill is 9 in 108: about 1 in 12, or 8%.
+J: So the test is... useless?
+N: Not at all. Before the test you had a 1 in 100 chance; now it's 1 in 12, about eight times higher. The test moved you a long way. It just started you from a very low place. It's exactly the car alarm: when the thing is rare, false alarms outnumber real ones.
+J: So the rarer the disease, the less a positive result means.
+N: That's the key insight, and you said it better than most textbooks. The starting rarity is called the ==base rate==. Forgetting it is one of the commonest mistakes people make, in hospitals, courtrooms, airports and newsrooms.
+@side Natural frequencies | The psychologist Gerd Gigerenzer found that when doctors are shown the same problem as counts of people ("10 out of 1,000 are ill...") instead of percentages, far more of them get it right. He called these counts "natural frequencies". Jim wanted to know if they were related to the Ducati's. They're not.
+J: Why are percentages so much harder?
+N: Because a percentage hides the crowd it came from. "90% accurate" makes you forget that there are 990 healthy people for every 10 ill ones. Counting people puts the crowd back.
+@name Base rate | How common something is before you see any evidence. Always start there.
+@unlock Picture the crowd | To judge any evidence, imagine a crowd, split it by what's true, and count who gets the evidence. When the thing you're testing for is rare, false alarms can outnumber true ones even for a good test.

@@ -1,0 +1,75 @@
+@section 2.1 | Anything you can add and scale | Introduction to vector spaces | You'll see recipes, arrows, songs and colours as the same kind of thing.
+@scene Saturday afternoon. A smell of frying onions, and a cry for help from Jim's kitchen.
+J: Neighbour! Emergency!
+N: Is Bruno all right?
+J: Bruno's fine. I'm not. My mother-in-law's biryani recipe serves four, and twenty people are coming tonight. It says "a few cardamom pods". What's five times a few?
+N: A handful. Show me the recipe.
+@beat A stained index card: 2 cups rice, 500 g chicken, 2 onions, 1 tsp cumin, 4 cardamom pods, 1 bay leaf, "salt to taste".
+N: For twenty, you multiply every line by five.
+J: Obviously.
+N: And your brother's bringing vegetarian friends, so you're cooking his paneer biryani as well. What goes on the shopping list?
+J: Both recipes added together, line by line. Rice plus rice, onions plus onions...
+N: Then congratulations: you're doing vector arithmetic.
+J: I'm doing groceries.
+N: Same thing. Remember the treasure hunt? A vector was "which way and how far". But look at how you'd actually write one down: "so far east, so far north". Two amounts.
+J: Two... ingredients. East and north.
+N: And your recipe is seven amounts. Seven ingredients.
+J: So an arrow is a recipe with two ingredients?
+N: Let's check. Take a tiny recipe, just chilli and salt, and draw it as an arrow: so many teaspoons of chilli across, so many of salt up.
+@fig recipes | Two-ingredient recipes as arrows. Scaling a recipe stretches its arrow; combining two recipes is tip-to-tail, exactly like the treasure hunt.
+J: Doubling the recipe doubles the arrow. And adding my brother's is walking one arrow, then the other.
+N: Tip to tail. The kitchen and the treasure map follow exactly the same rules. And that's the entire idea of this chapter: ==a vector isn't an arrow. A vector is anything you can add and scale, where adding and scaling behave the way you'd expect.== The arrow is just one costume it wears.
+J: What other costumes?
+N: Recipes. Shopping lists. Forces. Colours of light. Sounds. Pictures. You'll meet them all. In every costume, each ingredient is a direction, and the amount of that ingredient is how far you go in that direction.
+@beat Jim holds up a jar of garam masala.
+J: Then what's this? A new direction?
+N: What's in it?
+J: Cumin, coriander, cardamom, cloves, cinnamon, pepper...
+N: And do you have all of those in your cupboard, separately?
+J: Yes.
+N: Then garam masala isn't a new direction. Anything you can cook with it, you could cook without it, just by using the spices inside it. It's convenient, but it adds nothing new.
+@fig span | Cumin and coriander, and every mix of them, fill a flat sheet. Garam masala (simplified here to a mix of just those two) lies flat in that sheet, so it's not a new direction. Salt sticks straight out of it: no mix of the two spices makes salt.
+J: And salt?
+N: Can you make salt from any amount of cumin and coriander?
+J: Of course not.
+N: So salt is a genuinely new direction: it sticks out of the sheet of everything you can mix from those two. Mathematicians have names for all of this. Everything you can reach by mixing some ingredients is their ==span==. A set of ingredients where none is a mix of the others is ==linearly independent==. And an independent set that can reach everything you need is a ==basis==.
+J: And how many there are?
+N: That's the ==dimension==: how many truly independent ingredients the space needs.
+J: So everything I could cook from my seven lines is a seven-dimensional space.
+N: As long as none of them is secretly a mix of the others. Can you make a chocolate cake in it?
+J: No chocolate in the span.
+@name Basis | A set of ingredients where none is a mix of the others, and which together can make everything in the space.
+N: Now tell me what's been bothering you since Wednesday.
+J: Wednesday? ...Oh. Oh no. The orchestra. Each musician plays one pure wave at some loudness. That's a recipe! The pure waves are the ingredients and the loudnesses are the amounts.
+N: So a song is...
+J: A vector. A song is a vector.
+N: And a song is a wiggly line, which mathematicians call a function...
+J: Functions are vectors?
+N: Add two wiggly lines moment by moment and you get a wiggly line. Turn up the volume on one and it's still a wiggly line. It passes the test. The pure waves are a basis, and the Fourier coefficients you found with the resonance test are the amounts. They're the recipe.
+J: With infinitely many ingredients.
+N: One for every whole-number speed. It's an infinite-dimensional space, and you've been cooking in it all week.
+N: Now for the costume that surprises everyone. What's the dimension of colour?
+J: Colour? There are infinitely many colours.
+N: Infinitely many colours, but how many ingredients?
+J: Red, green and blue? Like on a TV?
+N: And why does a TV have three?
+J: Because... that's what TVs have?
+N: TVs have three because you have three. Light itself has infinitely many ingredients: Newton's prism showed you every wavelength in a sunbeam. But the back of your eye has only three kinds of colour sensor, called ==cones==, and each is most sensitive to a different part of the rainbow.
+@fig cones | Your three kinds of cone and the parts of the rainbow they respond to. However complicated a light is, your brain receives just three numbers: how strongly it tickles each kind. (Curves simplified.)
+J: So whatever light comes in...
+N: ...your eye squeezes it down to three numbers. Of all the infinitely many directions light can vary in, you see a three-dimensional shadow. And that has a startling consequence: two completely different lights that happen to produce the same three numbers look identical to you.
+@fig metamers | Two very different lights, one colour. Left: a smooth, broad glow. Right: three narrow spikes, like a screen's red, green and blue dots. Both tickle your three cones by exactly the same amounts, so you can't tell them apart. (Worked out with the simplified cones.)
+J: So my TV is lying to me.
+N: Beautifully, and only because you're a three-ingredient animal. Colour scientists call such look-alikes ==metamers==. Your screen builds a sunset out of three narrow spikes of light, and you're none the wiser.
+J: What about Bruno?
+N: Dogs have two kinds of cone, so Bruno lives in a two-dimensional colour space. To him, a red ball on green grass is mostly a matter of brightness.
+J: Poor Bruno.
+N: Don't pity him. Think of the mantis shrimp instead: it has twelve kinds of colour sensor. And yet experiments suggest it's worse than you at telling similar colours apart.
+J: Twelve ingredients and it can't cook?
+N: It seems to use them differently, for quick recognition rather than fine comparison. More dimensions aren't automatically better. What matters is what you do with them.
+@side The two-dimensional dog | Dogs, like many people with red–green colour blindness, have two kinds of cone, so their colours live in a two-dimensional space. A small number of people seem to carry a fourth kind of cone, and a very few may actually see with it.
+J: So recipes, arrows, songs, colours...
+N: ...are all the same kind of thing, because you can add and scale them. ==Once you see that, every tool you have for arrows works on all of them==, and that's why the idea is worth so much.
+J: The robot would have memorised a thousand arrows.
+N: And you learned the one thing they all do. Go and cook. And Jim: in your mother-in-law's presence, do not call her biryani a vector.
+@unlock Vectors wear costumes | A vector is anything you can add and scale. Pick independent ingredients (a basis) and every vector becomes a list of amounts. Arrows, recipes, songs and colours all live in vector spaces: of 2, 7, infinitely many and (for you) 3 dimensions.

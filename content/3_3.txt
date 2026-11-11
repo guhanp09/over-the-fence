@@ -1,0 +1,39 @@
+@section 3.3 | Getting closer | Convergence, horns and Stigler's law | You'll learn that "getting closer" depends on how you measure, and finally meet the horns.
+@scene Thursday evening. Jim has drawn a square wave on a napkin, with little horns at every jump.
+J: I've been waiting since Chapter 1. What are the horns?
+N: Let's zoom right in on one jump and draw it with 5 hands, then 15, then 60.
+@fig gibbs | Zooming in on a jump. With more hands, the horn gets narrower and moves closer to the jump, but its height never drops: it stays at about 9% of the jump.
+J: The horn gets thinner, and squashes up against the jump... but it's always the same height.
+N: About 9% of the jump, forever, no matter how many hands you add. Now, I told you in Chapter 1 that the hands draw the square wave perfectly "in the end". Is that true?
+J: It can't be. There's always a horn.
+N: Then let's measure how far the drawing is from the true square, with both of yesterday's distances.
+@fig rulers | The same drawings, measured two ways. The total area between the drawing and the square wave shrinks towards zero as you add hands. The single biggest gap never shrinks at all.
+J: The area between them shrinks to nothing. But the biggest gap stays put.
+N: So does the drawing get closer to the square or not?
+J: ...Both? It depends which distance you use.
+N: That's the whole lesson. =="Getting closer" only means something once you've said how you measure distance.== By the area distance, the drawing gets as close as you like. By the biggest-gap distance, it never does. Mathematicians call "getting as close as you like" ==convergence==, and they always have to say which distance they mean.
+J: So when you told me the hands draw anything, you meant the area version.
+N: I did. For sound, the area version is the one your ear cares about: a sliver of a horn carries almost no energy. But if the drawing were the shape of a bridge girder, you'd care about the worst gap.
+@note The biggest-gap kind is called uniform convergence. The area kind is convergence in the mean.
+J: Who found the horns?
+N: That's a lovely story. In 1898 the American physicist Albert Michelson, the man who measured the speed of light, built a brass machine with 80 springs and levers that added up 80 hands and drew the result. Its drawings of jumpy shapes came out with little horns beside the jumps.
+J: He thought his machine was broken!
+N: That's how the story is usually told. He certainly wrote to the journal Nature, puzzled about how such a sum could settle down at a jump. The great American physicist Josiah Willard Gibbs replied and explained the horns, and they've been called the ==Gibbs phenomenon== ever since.
+J: So Gibbs discovered them.
+N: Not quite. An English mathematician called Henry Wilbraham had described them exactly, in 1848, fifty years earlier. Nobody noticed.
+J: That's unfair.
+N: It's so common it has its own law. In 1980 the statistician Stephen Stigler proposed ==Stigler's law of eponymy==: no scientific discovery is named after its original discoverer.
+J: And who discovered Stigler's law?
+N: Stigler himself said the sociologist Robert Merton got there first.
+J: That's perfect. That's absolutely perfect.
+N: And it's our Feynman point from Chapter 1 again: the name tells you nothing about the idea, not even who had it.
+@side Where you can see the horns | Whenever something sharp is rebuilt from a limited number of waves, ghost ripples appear beside the edges. MRI scanners build images out of waves, and radiologists have a name for the faint echoes beside sharp boundaries: "Gibbs ringing". JPEG's ripples around text are the same thing.
+@fig ringing | A sharp edge, and the same edge rebuilt from a few waves. The bright and dark ghost ripples beside it are the Gibbs horns, seen as an image. You'll find them in MRI scans and around text in JPEGs.
+J: So the horns are why JPEG text looks smudgy?
+N: The horns and their ripples, yes. When you throw away the fast hands, sharp edges get haloes.
+J: Let me put this chapter together. A distance is anything that's never negative, the same both ways, and never lets a detour be a shortcut. You can put distances on words, songs, tastes and wiggly lines. And "getting closer" depends on which distance you pick.
+N: Beautifully summarised. Next time we're going to do something to vectors instead of just measuring them. Bring pizza dough.
+J: Why pizza dough?
+N: You'll see.
+@name Convergence | Getting as close as you like, measured by some distance. Always ask: which distance?
+@unlock Closeness depends on the ruler | A sequence can converge under one metric and not under another. Fourier's hands draw a square wave perfectly by area, but never by the worst gap: those are the Gibbs horns, about 9% of the jump, in every drawing with a jump.

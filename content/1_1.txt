@@ -1,0 +1,72 @@
+@section 1.1 | Circles all the way down | Introduction to Fourier series | You'll draw a musical note with nothing but spinning circles.
+@scene Tuesday evening. The bins are out. So, it seems, is a robot.
+J: Howdy, neighbour! Taking out the trash, eh?
+N: That's not trash, Jim. That's an imported robot from Germany. It cost more than my first car.
+J: Then why is it sitting next to the recycling?
+N: Because this morning your German Shepherd walked past the gate and it called him a wolf. Then it called the police.
+J: Bruno? A wolf? Bruno is scared of the vacuum cleaner.
+N: I know. I spent a fortnight teaching that machine what a dog is. I showed it five thousand photos of dogs, and every one of them, it turns out, was small, white and fluffy.
+J: So it learned "small, white and fluffy".
+N: It learned five thousand photographs. That's the problem. It stored every example perfectly and understood none of them. The moment something new walked past, a large black-and-brown animal with pointy ears, it had nothing to go on.
+J: Isn't that how we all learn, though? From examples?
+N: Examples are the raw material. What matters is what you do with them. You can store them, like the robot, or you can squeeze them down into a small working machine in your head, one that makes predictions about things you've never seen. When you were three you'd met perhaps a dozen dogs, and you could still recognise a breed you'd never laid eyes on.
+J: I squeezed.
+N: You squeezed. It's the difference between memorising a thousand sentences of a language and learning its grammar. Learn the grammar and you can say things nobody has ever said to you. The psychologist Kenneth Craik had a name for these little machines back in 1943: ==mental models==.
+@note Craik's book The Nature of Explanation (1943) argued that the mind builds "small-scale models" of reality so it can run ahead of it.
+J: All right, professor. What's the best mental model you own?
+N: Easy. It's the one I'd put in every head if I could: ==every repeating thing, whether a song, a heartbeat, the tides or the hum of your fridge, can be built out of circles spinning at steady speeds.==
+J: Circles. You're going to make a song out of circles.
+N: Give me twenty minutes and my watch.
+J: All ears.
+@beat I unstrap an old analogue watch and hold it over the fence.
+N: Three hands. The hour hand goes round once every twelve hours, the minute hand once an hour, the second hand once a minute. Each is just a stick, spinning at a steady speed around the centre.
+J: Riveting.
+N: Now for the trick. Imagine I unscrew the second hand and bolt it onto the tip of the minute hand, so it whirls around the end of the minute hand instead of around the centre. And let's speed the whole thing up, so we're not standing here for an hour.
+@fig watch | The second hand, unscrewed and bolted onto the tip of the minute hand. Tape a pen to the end of the little hand and let it draw.
+N: Tape a pen to the tip of the little hand. What does it draw?
+@pause Before you read Jim's answer, picture it. The big hand sweeps slowly round; the little hand whirls around its tip. What shape does the pen leave behind?
+J: Well... the big hand drags the little one round in a big circle. But the little one is whirling at the same time, so the pen keeps looping as it goes. A big circle with little loops all the way round. A flower-ish pattern?
+N: A flower-ish pattern. Exactly.
+J: Like a Spirograph!
+N: A Spirograph is exactly that: one circle rolling on another. The pen doesn't know it's doing mathematics. Now watch what happens when we change just two things about the little hand: how long it is, and how fast it spins. Or even which way.
+@fig twohands | Two hands are already a zoo. Change the little hand's length, speed or direction, and the same machine draws petals, stars or loops. Add a third hand and things get stranger still.
+J: The backwards one makes a star! And the long one loops right through the middle.
+N: Two or three spinning sticks, and already we're drawing shapes you'd struggle to draw by hand. Before we stack more of them, though, I want to be sure we agree on what a "hand" really is. Let's play a game. I've buried treasure somewhere in your garden.
+J: Please don't dig up my garden.
+N: Hypothetically. You may ask me two questions, and only two. What do you ask?
+J: "Which way?" and "How far?"
+N: Why not "What colour is the box?"
+J: Because it doesn't get me there. Which way and how far is all I need. Stand here, face north-east, walk forty paces, dig.
+N: Then you've just invented the most important object in this book. Something that carries a "which way" and a "how far" is called a ==vector==. You draw it as an arrow: it points the way, and its length is the distance.
+J: So a watch hand is a vector. Its length is "how far" and where it points is "which way".
+N: A vector that happens to be spinning. Now, say my treasure map has two steps: forty paces north-east, then twenty-five paces south. Where do you end up?
+J: I walk the first arrow, then start the second one from wherever the first one left me.
+N: Tip to tail. That's all "adding vectors" means: follow one set of directions, then the next.
+@fig treasure | Adding vectors is just following directions: walk the first arrow, then start the second from its tip. The dashed arrow, the shortcut, is their sum.
+J: Oh. Oh! That's what the watch was doing. The little hand starts from the tip of the big one. So the pen is at the end of the big arrow plus the little arrow.
+N: You've hit the nail on its conceptual head. At every instant, ==the pen is the sum of all the hands==. Stack a hundred hands, each riding on the tip of the one before, and the pen is the sum of a hundred spinning vectors.
+J: And with a hundred hands you can draw...?
+N: Name something.
+J: Something musical. An eighth note, the little flag thing.
+N: Done.
+@fig note | A musical note drawn by nothing but spinning circles. With 3 hands it's a blob, with 8 a suggestion, with 20 you'd recognise it, and with 80 it's crisp. The faint circles show the chain of hands at one moment, each riding on the last.
+J: That's absurd. There's no note in any of those circles.
+N: There's no note in any single one of them. The note lives in how they're combined: their lengths, their speeds and where each one starts. Change those numbers and the same machine draws your signature, the outline of Bruno, the coastline of India: anything you can draw in one loop without lifting your pen.
+J: Why "in one loop"?
+N: Because spinning hands always come back. Think about what that forces on us. Say the drawing takes one second to go round once, and then it repeats. Every hand has to be back where it started when that second is up. Otherwise the next loop starts somewhere else and the drawing smears.
+J: So each hand has to go round... a whole number of times?
+N: Once, twice, three times, a hundred times. Never two and a half.
+@fig closing | Why the speeds must be whole numbers. Left: the little hand turns exactly 3 times per loop, so the pen comes home and the drawing repeats perfectly. Right: at 2½ turns it misses home, and every loop smears a little further.
+J: And backwards?
+N: Backwards is fine: minus once, minus twice. About half the hands drawing that note are spinning backwards. What isn't allowed is a hand that doesn't come home.
+J: So the speeds aren't really a choice at all. The only choices are how long each hand is and where it starts.
+N: And that's why this idea is so powerful. The menu of speeds is fixed: 1, 2, 3, 4 turns per loop, forwards or backwards. ==Every loop-shaped drawing in the universe is just a different set of lengths and starting angles on that one menu.==
+@side Why this works at all | You might wonder why circles, and not squares or triangles, are the building blocks. Circles are the only shapes that spin at a perfectly steady speed and come back to where they started. That steadiness is what makes them easy to add, to measure and, as you'll see in 1.3, to detect.
+N: Now I can tell you what it's called. Writing a repeating thing as a sum of spinning circles, each turning a whole number of times per loop, is called a ==Fourier series==.
+@name Fourier series | A repeating thing, written as a sum of circles spinning at whole-number speeds.
+N: It's named after Joseph Fourier, who in 1807 used it to predict how heat spreads through a metal bar. The grandest mathematicians in Paris didn't believe him. We'll get to that fight.
+J: Heat? We started with a watch and ended with a note. Where does heat come in?
+N: Heat, sound, light, radio, the tides, your heartbeat, the wobble in the orbit of Mars. Anything that repeats. But you're right to be suspicious: so far we've only drawn pictures. Tomorrow I'll show you why these circles are hiding inside every sound you've ever heard.
+J: And the robot?
+N: The robot needed five thousand dogs and learned nothing. You needed one watch.
+@unlock The spinning-circles model | Anything that repeats can be built from circles that each turn a whole number of times per loop. At any moment, the pen is simply the sum of all the hands.

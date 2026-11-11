@@ -1,0 +1,81 @@
+@section 2.2 | The minus-two-onions problem | Developing the mathematical architecture for vector spaces | You'll learn the rules that make something a vector, why negative red exists, and how headphones erase noise.
+@scene Sunday morning. The party was a success. Jim's mother-in-law had notes.
+J: Morning. The biryani was a triumph, thank you. But my mother-in-law says next time it needs "two fewer onions and one more chilli". And that got me thinking about vectors, which is your fault.
+N: Dangerous. Go on.
+J: I wrote her advice down as her recipe minus mine. And for onions I got minus two. What on earth is minus two onions? You can't put minus two onions in a pot.
+N: Jim, that's the best question anyone has asked me all week. You've just caught recipes failing to be vectors.
+J: But you said...
+N: I said a vector is anything you can add and scale, where adding and scaling "behave the way you'd expect". It's time to say exactly what we expect. Let's write the rules by testing them on recipes. First: does the order matter when you add? Your recipe plus your brother's, or your brother's plus yours?
+J: Same shopping list.
+N: Does the grouping matter? With three recipes, add the first two and then the third, or the last two and then the first?
+J: Same again.
+N: Is there a recipe that changes nothing when you add it?
+J: The empty recipe. Nothing at all.
+N: Scaling: double a combined list, or double each list and then combine?
+J: Same.
+N: Scale by 2 and then by 3, or scale by 6 in one go?
+J: Same.
+N: Now the hard one. For every recipe, is there another one you can add to it that brings you back to nothing?
+J: ...No. That would need minus two cups of rice. That's where it breaks.
+N: So recipes pass every rule but one: they have no ==negatives==, and you can't scale them by negative numbers either. That's why your subtraction produced nonsense.
+@side The rules, in plain words | Adding: order doesn't matter; grouping doesn't matter; there's a "nothing" that changes nothing; and everything has a negative that cancels it. Scaling: scaling by 1 changes nothing; scaling twice is scaling by the product; and scaling spreads over adding, both ways round. Mathematicians call these the vector space axioms. Every one of them is obvious; the skill is noticing when one fails.
+N: But look at what your mother-in-law actually gave you. Not a recipe: a change to a recipe. Two fewer onions, one more chilli.
+J: A tweak.
+N: Can you add tweaks?
+J: One tweak, then another? Sure. "Two fewer onions" then "one more onion" is "one fewer onion".
+N: Scale them?
+J: "Do it twice as much": four fewer onions, two more chillies.
+N: A tweak that changes nothing?
+J: The do-nothing tweak.
+N: And a negative?
+J: Undo it: two more onions, one less chilli. That makes perfect sense!
+N: So tweaks pass every rule. ==Recipes are places. Tweaks are the journeys between them, and the journeys are the vectors.==
+@fig tweaks | Recipes are points: two of them don't add up to anything meaningful, and there's no such thing as a negative one. Tweaks, the arrows between recipes, can be added, scaled and undone, and the same tweak works from any starting recipe. The tweaks are the vectors.
+J: Like the treasure hunt! The spot where the treasure's buried isn't a vector. "Forty paces north-east" is.
+N: Exactly. You can't add two cities, but you can add two journeys. Or take temperature: is a 30-degree day plus a 30-degree day a 60-degree day?
+J: Ha! No. But "five degrees warmer" plus "five degrees warmer" is "ten degrees warmer".
+N: Temperatures are places; changes in temperature are vectors. Once you see this, you'll see it everywhere. Let's play a game: "vector or not". I name a collection, and you tell me whether it's a vector space.
+J: Go.
+N: All possible wiggly lines one second long.
+J: Add two, you get a wiggly line. Scale one, still a wiggly line. Negative: flip it upside down. Nothing: a flat line. Vector space.
+N: All the sounds quieter than 100 decibels.
+J: Scale one up by a thousand and it's too loud to be in the club. Not a vector space.
+N: All the tweaks that don't change the salt.
+J: Add two of them and the salt still doesn't change. Scaling doesn't change it, undoing doesn't, and the do-nothing tweak doesn't. Vector space!
+N: All recipes with exactly one teaspoon of salt.
+J: Add two and you've got two teaspoons, so it's out. And the empty recipe isn't in it either.
+N: That's the quickest test there is. ==If a collection doesn't contain "nothing", it can't be a vector space.== A rule like "the salt must be one" fails; "the change in salt must be zero" works. And a vector space living inside another one, like your salt-free tweaks, is called a ==subspace==.
+@name Subspace | A vector space living inside a bigger one, like the tweaks that leave the salt alone. It must always contain "nothing".
+J: So negative amounts only make sense for tweaks. Never for real stuff, like light.
+N: That's what everyone assumed. Then, in the late 1920s, two British scientists, William David Wright and John Guild, ran an experiment. Volunteers looked at a split circle: one half lit by a pure colour from the rainbow, the other by a mix of three lamps, red, green and blue. They turned the knobs until the two halves matched.
+J: Three ingredients to match any colour. Just like the TV.
+N: Except that for some bright blue-greens, no setting worked. However they turned the knobs, the mix looked washed out next to the target.
+J: So what did they do?
+N: They moved the red lamp to the other side. They shone red onto the target instead, and then it could be matched.
+J: Adding red to the target is like... taking red away from the mix.
+N: It's exactly that. Written as an equation, the mix needed ==negative red==.
+@fig negred | How much red, green and blue light you need to match each pure colour of the rainbow. Across the blue-greens, the red amount dips below zero. Nothing can shine negative light, so the experimenters shone it on the other side instead. (Worked out with the simplified cones, so trust the shape, not the exact numbers.)
+J: Minus two onions, in light!
+N: The mathematics insisted on negatives even though no lamp could make them, so the scientists simply moved the lamp across the equals sign. Their numbers became the 1931 international standard for colour, which still sits behind every screen and printer. And the negative red tells you something practical: no screen made of three coloured lights can show every colour you can see.
+J: I didn't know my TV had limits.
+N: Look at a real rainbow, then at a photo of one. The photo's blue-greens are always a little duller. Now: does sound have negatives?
+J: Flip the wiggly line upside down. Push where it pulled.
+N: And what's a sound plus its negative?
+J: ...Nothing. Silence.
+N: You've just invented noise-cancelling headphones.
+@fig antinoise | A noise, its exact negative and their sum: silence. Noise-cancelling headphones listen to the noise outside and play its negative inside, thousands of times a second.
+J: They play the anti-noise?
+N: A little microphone listens to the drone of the plane, a chip works out its negative, and the speaker plays that into your ear. Noise plus anti-noise is nothing. It works best on steady, low hums like engines. For sudden, high-pitched sounds the chip can't keep up, so the padding of the ear cups does that job instead.
+J: Bruno's barks would get through.
+N: Bruno gets through everything. One more example, and it's the reason Chapter 1 worked at all. In 1807 Fourier was studying heat spreading through a metal bar. He found some very simple heat patterns, one for each pure wave, that he could solve exactly. But real bars start with messy temperatures.
+J: So he added the simple ones up?
+N: But why was he allowed to? Adding two ways that heat could spread doesn't obviously give you another way it could spread.
+J: Unless... the ways heat can spread form a vector space?
+N: They do. If pattern A is a possible way for heat to spread, and pattern B is too, then A plus B is also possible, and so is three times A. Physicists call equations that behave like this ==linear==. So the possible heat patterns form a vector space, the simple patterns are a basis, and any messy start can be built from them.
+J: So Fourier series only work because of this.
+N: It's called the ==superposition principle==, and an enormous amount of physics rests on it. Sound in air at ordinary loudness is linear, which is why my voice and Bruno's barks simply added together, and could be pulled apart again.
+J: And when things aren't linear?
+N: Play your guitar through a distortion pedal. Double how hard you strum and the output doesn't double; it gets squashed flat at the top. The scaling rule breaks, and that breakage is precisely the crunchy sound rock guitarists love.
+J: So distortion is a failure of the vector space rules.
+N: A glorious one.
+@unlock The rules of the game | A vector space is a collection where adding and scaling behave: order and grouping don't matter, there's a "nothing", and everything has a negative. Places aren't vectors, but journeys are. When nature obeys the rules (superposition), you can build any solution out of simple ones.

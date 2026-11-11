@@ -1,0 +1,56 @@
+@section 2.3 | Same song, different language | Changing the basis | You'll understand what a JPEG really stores, and why Chapter 1 was a translation all along.
+@scene Monday evening. Jim is giving directions to a delivery driver over the phone. Badly.
+J: ...no, not left at the river. Along the river. Then up the hill. No, the other hill.
+@beat He hangs up.
+J: My phone says the takeaway is 300 metres east and 100 north. The man at the corner shop says "follow the river for 200 metres, then 150 up the hill". Which of them is right?
+N: Both. It's the same place: the same vector, described in two different ==bases==.
+J: The river and the hill are ingredients?
+N: They're directions to go in, just like east and north. Any two directions that aren't the same will do: go so far along one and so far along the other, and you can reach anywhere.
+@fig bases | One journey, two languages. On the east–north grid it's "3 east, 1 north" (in hundreds of metres). On the river–hill grid it's "2 along the river, 1.5 up the hill". The arrow doesn't care which grid you use.
+J: So the numbers change, but the journey doesn't.
+N: The numbers are the ==coordinates==, and they belong to the basis, not to the vector. It's like language. Bruno is "dog" in English, "Hund" in German and "naai" in Tamil. The robot would call him "Wolf", but that's a different problem.
+J: Same dog, different words.
+N: And here's the punchline of the book so far. Remember the wiggly line of a song? There are two natural ways to write it down. One: list where the speaker cone is at each instant. A CD does exactly that, with 44,100 numbers every second. Call that the "moment by moment" basis. Two: list which pure waves are in it, and how long each hand is. That's the "hand by hand" basis.
+J: And those are two languages for the same song!
+@fig languages | The same chord in two languages. Left: moment by moment, the height of the wiggly line at each instant. Right: hand by hand, how long each pure wave is. Three bars say everything the hundred-odd dots say.
+N: So what was Chapter 1?
+J: ...A translation. A Fourier series is just a song translated from "moment by moment" into "hand by hand".
+N: The most useful translation in science. Now, how do you translate? How did the man at the corner shop know it was "200 along the river"?
+J: He's lived here forty years.
+N: Suppose he hadn't. With the east–north grid there's an easy trick. Hold a torch straight above the arrow and look at its shadow on the east line. The length of the shadow is the east amount.
+J: A shadow again.
+N: Now try the same trick on the river–hill grid. Shine the light straight down onto the river line.
+@fig shadows | Shadows only tell the truth when the directions are at right angles. Left: with perpendicular directions, each shadow is exactly the coordinate. Right: with slanted ones, the shadow on the river line picks up part of the hill and overstates how far along the river you went.
+J: The shadow's too long! It's picking up some of the hill, because the hill leans towards the river.
+N: That's the trouble with slanted directions: they overlap, so a bit of "hill" looks like "river". It's like a taste test. If there's garam masala and cumin in a dish, tasting for cumin also picks up the garam masala, because they overlap. You can't taste one without the other.
+J: But with directions at right angles, each shadow measures just one thing.
+N: Right angles are what make translation easy. Each coordinate is one shadow, measured on its own, ignoring all the others. And the shadow has a formula: for arrows, multiply the matching coordinates and add them up. It's called the ==dot product==.
+J: Multiply and add up... that's the resonance test! Multiply F by the test wave at every moment and add it all up!
+N: It's the same operation, just with a coordinate for every instant instead of two.
+J: And the resonance test worked because different pure waves cancelled out... because they don't overlap... because they're...
+N: Say it.
+J: ...at right angles. They're perpendicular! That's what you meant by "orthogonal"!
+N: ==Every pure wave is perpendicular to every other one==, in a space with a direction for every instant. That's why the test for one hand completely ignores all the others. With a slanted basis you'd have had to untangle all the overlaps at once; with a perpendicular one, you can measure each hand on its own.
+@name Orthogonal basis | Directions at right angles to each other. Each coordinate is then just a shadow, measured on its own.
+N: Now for the payoff in your pocket. Every photo on your phone is a grid of dots, called pixels, each with a brightness. What's the obvious basis?
+J: One ingredient per pixel: "this much brightness here, this much there".
+N: A JPEG chops the photo into blocks of eight by eight pixels, which makes 64 numbers per block. Then it translates each block into a different basis: 64 wave patterns, running from perfectly smooth to finely striped.
+@fig dct | The 64 ingredients of a JPEG. Every 8×8 block of every JPEG is a mix of these wave patterns: slow, smooth ones at the top left, fast, fine stripes at the bottom right.
+J: Waves again! Two-dimensional hands.
+N: Now think about a real photo. Sky, skin, walls: mostly smooth. What happens to them in the pattern basis?
+J: Smooth things only need slow hands... so almost all the weight lands on the top-left patterns, and the fast ones get tiny amounts.
+N: So?
+J: So throw away the tiny amounts!
+N: That's JPEG. Translate each block into the pattern basis, keep the few big numbers, round the small ones to zero, and store what's left. Watch.
+@fig compression | Rebuilding a photo from only the biggest pattern amounts in each block. With 1 number out of 64 it's a mosaic, with 3 it's recognisable, and with 10 it's hard to tell from the original. The photo is of Rear Admiral Grace Hopper, a pioneer of computer programming (U.S. Navy photo).
+J: Ten numbers out of sixty-four, and it's nearly perfect. That's a sixth of the storage!
+N: The real JPEG is a little cleverer, but that's the heart of it. ==Compression means choosing a basis in which your data is lopsided==, so that a few coordinates carry nearly everything. And now you know why a JPEG of text looks smudgy around the letters.
+J: Letters have sharp edges... sharp things need fast hands... and those are the ones JPEG throws away. Corners are expensive!
+N: Chapter 1 and Chapter 2 in one smudge. JPEG even changes the colour basis before it starts, from red–green–blue to brightness plus two "colour difference" coordinates, and then it keeps less detail in the colour ones.
+J: Because my eye cares more about detail in brightness than in colour?
+N: You're three steps ahead of me now.
+J: Let me see if I've got it. A vector is anything you can add and scale. A basis is a language for describing it. When a basis is at right angles, translating is just taking shadows. And the whole art is choosing the language in which the thing you care about is simple.
+N: If you ever teach this, start with that paragraph.
+J: And next? You said pure waves are perpendicular. If songs have directions, can they have distances too? How far apart are two songs?
+N: Now that, Jim, is Chapter 3.
+@unlock Changing the basis | The same vector has different coordinates in different bases. With a perpendicular basis, each coordinate is just a shadow (a dot product) measured on its own. A Fourier series is a change of basis, and so is a JPEG. Compression means choosing the basis where a few numbers say nearly everything.

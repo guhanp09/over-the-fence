@@ -1,0 +1,37 @@
+@section 7.2 | How far do things fall back? | Developing the mathematical architecture for regression | You'll find out exactly how much of a surprise survives to next time, and where the word "regression" came from.
+@scene Sunday. Jim has brought two years of his son's team scores, written on the back of a programme.
+J: Right. If an extreme result is part skill and part luck, how much falls back?
+N: Let's say skill and luck vary by about the same amount from team to team. A team scores 10 goals above the league average this season. How much of that 10 do you expect to be skill?
+J: If they vary by the same amount, then... on average, half? So 5 is skill and 5 is luck.
+N: And next season?
+J: The 5 of skill stays and the 5 of luck vanishes. So I'd expect them 5 above average.
+N: So your best guess for next time is:
+@formula Your best guess, in words | Next result  =  average  +  (share that's skill)  ×  (this result  −  average)
+J: And if it were all skill, the share would be 1, and nothing would fall back. All luck, the share is 0, and everyone falls straight back to average.
+N: That "share that survives" has a famous name: the ==correlation==. It measures how strongly one result predicts the next. Let's see it in a picture: hundreds of teams, their first score against their second.
+@fig scatter | Each dot is one team: first result across, second result up. If results were all skill they'd sit on the dashed line. In reality the best-guess line (coral) is flatter: here, about half of every gap from average survives to next time.
+J: The coral line is flatter than the diagonal. Teams far out on the right come back towards the middle.
+N: That coral line is the best straight-line guess of the second result from the first. Now for the name. In the 1880s Francis Galton, Charles Darwin's half-cousin, measured the heights of hundreds of fathers and their grown-up sons.
+J: Tall fathers have tall sons.
+N: Taller than average, yes, but less tall than their fathers. Galton called it "regression towards mediocrity", and the line he drew through his data was the first ==regression line==.
+J: Regression. That's the word in linear regression! The thing every data scientist uses!
+N: The most-used tool in statistics is named after this effect, a quirk of skill and luck. Now the twist that proves it's not some force. If you start from tall sons and ask about their fathers...
+J: ...the fathers are tall, but less tall than their sons? It goes backwards in time as well?
+N: It does.
+@fig galton | Fathers' and sons' heights. Sons of tall fathers are tall, but less tall (coral). Fathers of tall sons are tall, but less tall (blue). It works in both directions, so it can't be a force acting on the children. It's what happens whenever you pick the extremes.
+J: So it can't be a force pushing children towards the average. Nothing can push backwards in time.
+N: Exactly. It's not a force. It's what happens whenever you select people for being extreme, on anything that's partly luck.
+@note Heights are mostly inherited, so for heights the share that survives is large, but it's still less than 1.
+J: So how do I prove to the coach that the yelling does nothing?
+N: Compare. Take the weeks the team played badly. On some of them the coach yells; on others, say, he's lost his voice. See whether the teams he yelled at improve more than the ones he didn't.
+@fig control | The only fair test: compare equally bad games, with and without the yelling. If both groups bounce back by the same amount, it was regression to the mean all along.
+J: And if both improve by the same amount...
+N: ...the yelling did nothing. Having a group that doesn't get the treatment is called a ==control group==, and it's one of the greatest inventions in the history of thinking. Nearly every medicine you've ever taken was proved that way.
+J: Let me put the whole book together. Everything that repeats is circles. Anything you can add and scale is a vector. Distance is a choice. Every transformation has a grain. Moves have a grammar. Evidence multiplies odds. And extremes are partly luck.
+N: Seven ideas over a garden fence. None of them needed more than school maths, and every one of them runs a piece of the modern world.
+J: And the robot?
+N: The robot now updates its beliefs one clue at a time, knows that a dog is a vector of clues, and has stopped calling Bruno a wolf.
+J: Bruno's forgiven it.
+N: Bruno forgives everyone. That's his mental model.
+@name Correlation | The share of a surprise that survives to next time: 1 if results are all skill, 0 if they're all luck.
+@unlock Before you credit the cause | Best guess for next time = average + correlation × (this time − average). Extremes fall back by exactly the share that was luck. The effect runs backwards in time too, so it isn't a force. To tell real causes from regression, compare against a control group.

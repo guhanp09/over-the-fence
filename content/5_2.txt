@@ -1,0 +1,35 @@
+@section 5.2 | The grammar of moves | Developing the mathematical architecture for groups | You'll find the four rules every group obeys, a hidden Sudoku, and why getting dressed has an order.
+@scene Monday morning. Jim is hopping on one foot, trying to put a sock on over his shoe.
+N: That's not going to work.
+J: I'm in a hurry.
+N: Then you've just stumbled on the most important rule about undoing things. How do you get dressed?
+J: Socks, then shoes.
+N: And to undo it?
+J: Shoes off, then socks off. Obviously.
+N: So undoing reverses the order. The inverse of "socks then shoes" is "undo shoes, then undo socks".
+@fig socks | To undo a sequence of moves, undo them in reverse order. And socks-then-shoes isn't the same as shoes-then-socks: in many groups, order matters.
+J: And shoes then socks is a disaster. So order matters.
+N: Sometimes it does and sometimes it doesn't. For the mattress, spin then roll is the same as roll then spin. For clothes, and for a Rubik's cube, it matters enormously. Let's write down what every group must obey, the way we did with vectors. First: combine any two moves and you get another move in the collection.
+J: Spin then roll is flop. It's still a mattress move.
+N: Second: there's a do-nothing move. Third: every move can be undone.
+J: And the fourth?
+N: The subtlest. If you do three moves, A, B and C, it doesn't matter whether you think of it as "A then (B then C)" or "(A then B) then C". Same result.
+J: That's obvious.
+N: It is, for moves. But there are ways of combining things where it fails, like dividing numbers, and then the whole theory falls apart. These four rules are the entire definition of a group.
+@side The four rules | Closure: combining two moves gives a move. Identity: there's a do-nothing move. Inverses: every move can be undone. Associativity: how you bracket a sequence doesn't matter. Notice what's not on the list: that order doesn't matter. Groups where it doesn't are called abelian, after the Norwegian mathematician Niels Henrik Abel.
+N: Now let's write out the mattress's whole "times table": every move, followed by every move.
+@fig table | The mattress's times table. Every move appears exactly once in every row and once in every column, just like a Sudoku.
+J: It's a Sudoku! Every move appears exactly once in each row and each column.
+N: Is that luck?
+@pause Why can't a move appear twice in the same row? Suppose "spin, then X" and "spin, then Y" gave the same result. What could you do to both?
+J: Suppose "spin then X" and "spin then Y" gave the same result. Then I undo the spin at the start of both... so X and Y must be the same move! No move can appear twice in a row. And since there are only four, each one must appear exactly once.
+N: That's a real proof. Every group's times table is a Sudoku, and the reason is the undo rule. These tables are called ==Cayley tables==, after Arthur Cayley.
+J: And for a group where order matters?
+N: Take a triangle cut out of card, with its corners numbered. Two moves: turn it a third of the way round, or flip it over.
+@fig trimoves | A triangle turned then flipped ends up different from one flipped then turned. The triangle's group is the smallest one where order matters.
+J: Turn then flip gives 3, 2, 1. Flip then turn gives 2, 1, 3. Different!
+N: The triangle's six moves make the smallest group where order matters. And that's the key to the Rubik's cube. Solvers use sequences like "do A, do B, undo A, undo B". If order didn't matter, that would do nothing at all. Because it does matter, it does something tiny, like swapping just two corners, which is exactly what you need at the end of a solve.
+J: So cube solvers are using the fact that the group isn't a Sudoku that reads the same both ways.
+N: Precisely: they're living in the gap where order matters. Those "do A, B, undo A, undo B" sequences are called ==commutators==, and they measure exactly how much order matters.
+@name Commutator | "Do A, do B, undo A, undo B". It does nothing if order doesn't matter, and something small and useful if it does.
+@unlock The grammar of moves | Every group obeys four rules: you can combine moves, there's a do-nothing move, everything can be undone, and bracketing doesn't matter. Undoing reverses order, every group's table is a Sudoku, and when order matters, commutators let you make tiny, precise changes.

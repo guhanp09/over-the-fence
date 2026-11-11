@@ -1,0 +1,53 @@
+@section 1.4 | How many circles? | Convergence, corners and a 159-year argument | You'll learn why sharp corners are expensive, and why mathematicians fought about it for 159 years.
+@scene Friday morning. Jim is waiting at the fence with a coffee and a suspicious expression.
+J: I couldn't sleep. You keep saying "infinitely many hands". If I add up infinitely many things, don't I get infinity?
+N: Not necessarily. Walk towards that wall, but at each step only cover half the distance that's left.
+J: Half, then a quarter, then an eighth... I never quite get there.
+N: But you never go past it, either. One plus a half plus a quarter plus an eighth, on forever, adds up to exactly two. Infinitely many pieces, finite total.
+@fig halving | Top: halve the gap each time and the pieces pile up to exactly 2, never beyond. Bottom: the harmonic series looks just as tame, but group its pieces cleverly and every group is bigger than ½, so it grows past any number you name.
+J: Right, so as long as the hands keep getting smaller, the total settles.
+N: Careful. Try one, plus a half, plus a third, plus a quarter, plus a fifth...
+J: They're getting smaller. So it settles.
+N: It never settles. It grows forever.
+J: It can't!
+N: A French bishop called Nicole Oresme proved it around 1350, with a trick you can do in your head. Group the pieces. A third plus a quarter is more than a half. The next four pieces, a fifth to an eighth, add up to more than a half. The next eight, more than a half again. You get an endless supply of halves, and endless halves add up to anything you like.
+J: That's outrageous.
+N: It's slow, mind. You need more than twelve thousand pieces to pass 10, and about 272 million to pass 20. But it never stops. And here's the delicious part: it's called the ==harmonic series==, after music, because a string's harmonics have wavelengths of one, a half, a third and a quarter of the string's length.
+J: So the one sum named after music is the one that runs away.
+N: Which tells you that "getting smaller" isn't enough. What matters is how fast the hands shrink, and that depends on the shape you're drawing. Let me show you two wiggly lines. A triangle wave: straight slopes and pointed tops. And a square wave: flat, then a sudden jump, then flat again.
+@fig corners | Drawing with more and more hands. The triangle wave (top) is nearly perfect with just three, because its hands shrink fast: the second is 1/9 the length of the first, the third 1/25. The square wave (bottom) needs far more, because its hands shrink slowly: 1/3, 1/5, 1/7... And look at the little horns beside each jump.
+J: The triangle's practically there with three hands. The square is still wobbling with fifteen.
+N: Why, do you think?
+J: The square has a jump. It has to get from the bottom to the top instantly, and slow, lazy circles can't turn that sharply. You need fast hands for sharp corners, and lots of them.
+N: That's the whole thing. ==Smooth things need only slow hands. Sharp things need fast ones, and plenty of them. Corners are expensive.==
+J: Is that why a clap sounds so bright? It's a sudden jump.
+N: Exactly. A clap, a snare drum, a snapped twig: all sharp, all full of fast hands. A hum is smooth and has almost none. And you know what a square wave sounds like, by the way.
+J: Do I?
+N: The Super Mario theme. The old Nintendo played the melody on square-wave voices and the bass line on a triangle wave.
+J: So that buzz is all those slowly shrinking hands?
+N: That buzz is precisely the slowly shrinking hands. The triangle bass sounds soft and round because its hands vanish so fast.
+@side Your ear can hear hands shrinking | A square wave's hands shrink like 1/3, 1/5, 1/7, so the hand spinning five times per loop is still a fifth as long as the first. That long tail of loud, fast hands is the buzz in retro game music. In a triangle wave the same hand is only 1/25 as long, which is why it sounds almost as pure as a flute.
+J: What are those horns on the square, next to each jump?
+N: Ah. Add more hands and they squeeze closer to the jump, but they never get any shorter. They stay at about nine percent of the jump, forever.
+J: Forever? But you said the hands could draw anything!
+N: Hold that thought. It has a name, a strange history and a whole section of Chapter 3.
+J: So did everyone just believe Fourier?
+N: Nobody believed Fourier. In 1807 he told the Paris Academy that any function could be built from pure waves, even ones with corners. Joseph-Louis Lagrange, perhaps the greatest mathematician alive, objected. How could smooth waves possibly add up to a sharp corner?
+J: I'm with Lagrange. That's exactly what I just said.
+N: And you were both right to be suspicious. The argument lasted 159 years.
+@fig timeline | The 159-year argument. Engineers used Fourier series happily the whole time; mathematicians took until 1966 to settle exactly when they work.
+J: Kolmogorov found one where it fails everywhere?
+N: A function so strange that its Fourier series doesn't settle at a single point. Then in 1966 Lennart Carleson proved that for every function you'd meet in real life, and plenty you wouldn't, it settles almost everywhere. Physicists and engineers didn't wait for permission. They used it the whole time, to build telegraphs, radios and radar.
+@note "Almost everywhere" is a precise idea: the places where it fails take up no length at all.
+N: One last thing, and it's the one in your pocket. Your phone stores songs as MP3s, or something like them. Guess how.
+J: It breaks the song into hands, slice by slice...
+N: And then?
+J: ...throws away the hands I can't hear?
+N: Exactly. A loud hand drowns out quieter ones close to it in pitch, the way a shout drowns out a whisper. So the file keeps the hands your ear will notice and throws most of the rest away. That's how a song shrinks to about a tenth of its size and you barely notice.
+J: And photos? JPEGs?
+N: The same trick. But for that you need the idea in the next chapter.
+J: One complaint. All week, you never once said "Fourier coefficient" or "sine wave" until the very end. Why not tell me the names up front?
+N: Because a name up front is a lid on a box you haven't looked inside yet. Richard Feynman liked to say there's a difference between knowing the name of something and knowing something. You can know the name of a bird in every language on earth and still know nothing about the bird.
+J: Well. I know something now.
+N: You know a great deal. You know that every repeating thing is made of circles, that circles seen side-on are waves, and that a song is an orchestra of them. You know how to find each musician with a resonance test, and why corners cost so much. ==Plenty of people with a maths degree couldn't tell you half of that over a garden fence.==
+@unlock How many circles? | Infinitely many hands can still add up to something finite, but only if they shrink fast enough. Smooth shapes need few, slow hands; sharp corners need many fast ones. That one fact runs MP3s, JPEGs and the sound of Super Mario.

@@ -1,0 +1,32 @@
+@section 6.3 | The costliest mistake in probability | When "if" gets turned around | You'll learn to spot one reversed sentence that has fooled juries, doctors and everyone who has searched their symptoms online.
+@scene Thursday. Jim is pale and holding his phone.
+J: I've had a headache for two days. I looked it up. Serious illnesses cause headaches.
+N: Most people with a serious brain illness get headaches, yes. So what's your question?
+J: Whether I have one!
+N: Then you've just turned a sentence around. "Most people with the illness have headaches" is one sentence. "Most people with headaches have the illness" is a completely different one. The first is true. The second is wildly false.
+@fig inverse | "Most seriously ill people have headaches" is true: most of the red circle is inside the blue. "Most people with headaches are seriously ill" is false: almost none of the blue circle is red. Same two circles, two very different sentences.
+J: Because almost everybody gets headaches, and almost nobody has the illness.
+N: The base rate again. The chance of the evidence, given the illness, isn't the chance of the illness, given the evidence. Reversing them is called ==the confusion of the inverse==, and it's everywhere. Drink some water and get some sleep.
+J: Is it ever more serious than a scare?
+N: It has sent people to prison. I'll tell you about Sally Clark, and I'll tell it carefully, because she was real.
+@beat The joking stops for a while.
+N: Sally Clark was a solicitor in England. In 1996 her first baby son died suddenly, and in 1998 her second. She was charged with murdering them. At her trial in 1999, a senior paediatrician, Sir Roy Meadow, told the jury that the chance of two sudden infant deaths in a family like hers was about 1 in 73 million.
+J: 1 in 73 million. That sounds like proof.
+N: The number was wrong twice over. First, he got it by taking 1 in 8,543 for one death and squaring it, as if the two deaths were unrelated coin tosses. But families share genes and homes, and a family that has lost one baby this way is at higher risk of losing another.
+J: So the two events aren't independent. Like the second test from the same faulty lab.
+N: Exactly the same mistake. But the deeper error is the one we started with. Even if two sudden deaths really were that rare, the jury had to compare two explanations of a tragedy that had already happened: two natural deaths, or two murders. And a mother murdering two babies is also extraordinarily rare.
+@fig tworare | When something rare has definitely happened, the question isn't "how rare is the innocent explanation?" but "how rare is it compared with the alternative?". Both explanations of the Clark case were very rare.
+J: So "how unlikely is the innocent explanation" is the wrong question. It's "which explanation is less unlikely?"
+N: That's the whole thing. Treating "the chance of this evidence if she's innocent" as "the chance she's innocent" is called ==the prosecutor's fallacy==. The Royal Statistical Society wrote publicly to say the figure was wrong. One statistician later estimated that, given the deaths, natural causes were several times more likely than murder.
+J: What happened to her?
+N: She was convicted in 1999. Her conviction was overturned in 2003, after it emerged that medical evidence that could have helped her had never been disclosed. Other convictions that had leaned on the same kind of evidence were reviewed. She never recovered from the ordeal, and she died in 2007.
+@beat Neither of them says anything for a while.
+J: Two sentences that sound almost the same.
+N: "The chance of the evidence if innocent" and "the chance of innocence given the evidence". The whole difference is Bayes: the base rate, and the alternatives you compare against. That's why I think this is the most important idea in the whole book, even though it's the easiest.
+J: So what's the habit? What do I actually do?
+N: Three questions, every time. How common was this before any evidence? How much more likely is this evidence if it's true than if it isn't? And what's the alternative explanation, and how likely is that?
+@side Where the reversed sentence turns up | "Most burglars wear trainers." "Most people who crash were driving close to home." (Most driving happens close to home.) "The screening machine flags 99% of dangerous bags." In every case, ask the reverse: of everything that matches the evidence, how much is actually what you fear?
+J: And my headache?
+N: Base rate: headaches are common and serious illnesses are rare. Strength of the clue: weak. Alternative: you've been staring at a phone for two days. Water, sleep, and see a doctor if it doesn't go away.
+@name Prosecutor's fallacy | Mistaking "the chance of the evidence if innocent" for "the chance of innocence given the evidence".
+@unlock Never flip the "if" | The chance of the evidence given an idea is not the chance of the idea given the evidence. Ask three questions: how common was it before the evidence, how strong is the clue, and what's the alternative?

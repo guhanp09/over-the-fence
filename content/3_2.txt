@@ -1,0 +1,39 @@
+@section 3.2 | Distances between things that aren't places | Developing the mathematical architecture for metrics | You'll measure how far apart two words, two songs and two people are, and see why one rule makes search fast.
+@scene Wednesday. Jim is typing on his phone with his thumbs, and losing.
+J: Every time I type "the", I get "teh", and my phone fixes it. How does it know I meant "the" and not "tea"?
+N: It measures how far "teh" is from every word it knows and picks the closest.
+J: How far a word is? Words don't have locations.
+N: Places aren't the only things with distances. All we need is a rule that obeys the three laws. So invent one for words.
+J: Um... how many changes it takes to get from one to the other?
+N: Go on. What counts as a change?
+J: Swapping a letter, adding one, or deleting one.
+N: Then the distance from "kitten" to "sitting" is...
+@fig edits | The edit distance from "kitten" to "sitting" is 3: two swaps and one added letter. No shorter route exists.
+J: Swap the k for an s, swap the e for an i, add a g. Three.
+N: That's called the ==edit distance==. A Soviet mathematician, Vladimir Levenshtein, wrote it down in 1965. Now check it against the three rules.
+J: Never negative, and zero only if the words are identical. Symmetric: every change can be undone, so the way back is just as long. And the triangle rule: if I can get from A to B in 3 changes and from B to C in 2, I can certainly get from A to C in 5. Maybe fewer.
+N: So it's a genuine distance, and every tool built for distances now works on words. Your phone uses it. So do biologists: DNA is a word written in four letters, and the edit distance between two species' DNA tells you roughly how long ago they shared an ancestor.
+J: So "how different are a human and a chimp" is a distance between two very long words.
+N: Very long: about three billion letters each. Which raises a practical problem. Your phone knows a hundred thousand words. When you type "cst", does it really measure the distance to every single one?
+J: I'd hope not. That sounds slow.
+N: This is where the triangle rule stops being a formality and starts saving you time. Suppose the phone already knows that "cat" is 6 edits from "elephant". And it finds that your "cst" is just 1 edit from "cat".
+J: Then... going from "cst" to "elephant" via "cat" is at most 7. But that's the wrong way round, isn't it? I want to know it's far.
+N: Turn the triangle around. Could "cst" be within 4 of "elephant"?
+J: If it were, then "cat" to "elephant" via "cst" would be at most 1 + 4 = 5. But it's 6. So no! "cst" must be at least 5 away from "elephant". I don't even need to check.
+@fig prune | The triangle inequality as a shortcut. Knowing two distances you've already worked out, you can rule out "elephant" without ever comparing it to the typo. Spell-checkers use this to skip most of the dictionary.
+N: That's the trick. Arrange the dictionary cleverly, and one comparison rules out thousands of words at once. There are search systems built entirely on this idea. They work for any metric: words, images, songs, fingerprints.
+J: Songs have a distance?
+N: Anything that's a vector gets one for free. Remember Chapter 2? A song, a recipe, your taste in films: all lists of amounts. For arrows we measured length with Pythagoras, and Pythagoras is just the dot product of an arrow with itself. So the distance between two vectors is the length of the journey between them.
+J: So if I rate ten films and you rate the same ten, our ratings are two arrows with ten coordinates...
+N: ...and the distance between them tells a streaming service how alike our tastes are. "People near you liked this."
+J: That explains a lot about my recommendations. What about wiggly lines? How far apart are two songs as wiggly lines?
+N: You told me yourself, on the Ducati: "the distance is the area". Here are two sensible choices.
+@fig curvedist | Two ways to measure the distance between two wiggly lines. Left: the total area between them. Right: the single biggest gap anywhere. Both obey the three rules, and they can disagree.
+J: The area between them, or the biggest gap between them.
+N: Both are genuine distances. The area version asks "how different are they overall?". The biggest-gap version asks "how bad is the worst moment?". A sound engineer might care about the first, and someone designing a bridge that must never bend too far would care about the second.
+J: And do they ever disagree?
+N: Spectacularly. And that disagreement is the answer to a question you asked me in Chapter 1, about some little horns.
+J: The horns on the square wave!
+N: Tomorrow.
+@name Edit distance | How many single-letter changes turn one word into another. A genuine distance between words.
+@unlock Anything can have a distance | Words, DNA, songs and tastes can all be given distances, as long as the three rules hold. The triangle inequality isn't just a rule: it lets you rule things out without checking them, which is how fast search works.

@@ -1,0 +1,31 @@
+@section 6.2 | Updating, one clue at a time | Developing the mathematical architecture for Bayes' theorem | You'll turn the crowd into a formula, then into a trick you can do in your head.
+@scene Wednesday. The robot is back from the recycling. Jim has been reprogramming it.
+J: I'm teaching the robot properly this time. With mental models. But I need your crowd trick in a form it can use.
+N: Then let's write it in words. After a positive test, the chance you're ill is: the number who are ill and test positive, divided by everyone who tests positive.
+J: 9 divided by 108.
+N: And if we swap people for fractions of the crowd, that's the whole of Bayes' theorem:
+@formula Bayes' theorem, in words | Chance of being ill, given a positive test  =  ( chance of ill  ×  chance an ill person tests positive )  ÷  chance of testing positive at all
+J: That's just the crowd count with fractions instead of people.
+N: That's all it ever is. But there's a version you can do in your head, and it's the one I actually use. Use ==odds== instead of chances.
+J: Like betting?
+N: Exactly like betting. Before the test, the odds of ill to healthy are 1 to 99. Now: how much more likely is a positive result from an ill person than from a healthy one?
+J: Ill people test positive 9 times in 10, healthy ones 1 time in 10. So nine times more likely.
+N: That's the ==strength of the clue==. And here's the rule: ==odds after = odds before × strength of the clue.==
+J: 1 to 99, times 9, is 9 to 99. Which is... 9 ill for every 99 healthy. That's the crowd again!
+N: Same answer, no crowd needed. Now the beauty of it. Say you take a second, independent test, and it's also positive.
+J: Multiply by 9 again: 81 to 99. Nearly even! And a third: 729 to 99. That's almost 90%.
+@fig odds | Each positive test multiplies the odds by 9. One positive takes you from 1% to 8%. Two take you to 45%. Three to 88%. Evidence piles up by multiplying.
+N: That's why doctors re-test. One clue barely moves a rare suspicion; three independent clues can settle it. But notice the word ==independent==. If the second test is done in the same lab, with the same faulty batch, it's the same mistake twice and not a new clue at all.
+J: So "today's answer is tomorrow's starting point", as long as tomorrow's clue is new.
+N: Now your robot. How should it decide whether the animal at the gate is a dog or a wolf?
+J: Start with the odds: say, even. Then every clue multiplies them. Pointy ears: dogs and wolves both have them, so maybe ×2 for dog. Barking: wolves hardly ever bark, so ×20 for dog. Lives next door: wolves never do, ×50. Wags its tail at me: ×10.
+@fig robot | The robot, reformed. It starts undecided and multiplies the odds by the strength of each clue. By the fourth clue it's 20,000 to 1 on "dog". Spam filters work exactly this way, clue by clue, word by word.
+N: And at the end?
+J: 2 times 20 times 50 times 10 is 20,000 to 1. It's Bruno.
+N: And that is, almost word for word, how the first good spam filters worked. Each word in an email is a clue: "winner" makes spam more likely, your mother's name makes it less. Multiply the strengths together and you've got your verdict.
+J: So the robot didn't need five thousand photos. It needed a way to update.
+N: That's the difference between memorising and understanding, in one sentence.
+@side A minister's theorem | Thomas Bayes was an English Presbyterian minister who worked out the idea in the mid-1700s. He never published it. After his death in 1761 his friend Richard Price found it among his papers, edited it, and sent it to the Royal Society in 1763.
+@textbook Textbooks write Bayes' theorem as P(A | B) = P(B | A) × P(A) ÷ P(B): the chance of A given B equals the chance of B given A, times the chance of A, divided by the chance of B. The odds version says: posterior odds = prior odds × likelihood ratio.
+@name Likelihood ratio | How much more likely a clue is if the idea is true than if it isn't: the strength of the clue.
+@unlock Multiply the odds | Odds after = odds before × strength of the clue. Independent clues simply multiply, so weak evidence adds up. It's how doctors re-test, how spam filters sort your inbox, and how a robot should learn.

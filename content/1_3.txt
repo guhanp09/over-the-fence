@@ -1,0 +1,87 @@
+@section 1.3 | The resonance test | Developing the mathematical architecture for Fourier analysis | You'll find every hidden hand in a wiggly line, and discover your ear already does it.
+@scene Thursday. A deep burble outside. Jim is sitting on something red.
+N: Is that a Ducati Monster I am looking at?
+J: Ha, yes! I'm renting superbikes for a few weeks: the Ducati, then a Harley, then a Kawasaki. For science.
+N: And the verdict?
+J: It lives up to its name. But something's off. Around four thousand rpm the mirrors blur and the handlebars buzz like they're angry. At five thousand it's smooth as butter.
+N: That's not the bike being faulty. That's the bike being an orchestra. The engine shakes the frame at a speed set by the revs. And the frame, like every object, has favourite speeds of its own, speeds it loves to wobble at: its ==natural frequencies==. When the engine's shaking lines up with one of them, the frame joins in and the wobble grows. That's ==resonance==.
+J: So at four thousand, the engine is singing the frame's favourite song.
+N: Beautifully put. Your body has natural frequencies too. Your belly likes to wobble at roughly 4 to 8 times a second, your head at 20 to 30. That's partly why hours on a buzzing bike wear you out, and why lorry seats sit on springs.
+N: Have you ever pushed a child on a swing?
+J: My nephew. Endlessly.
+N: What happens if you push exactly in time with the swing?
+J: Higher and higher. Every push adds a bit.
+N: And if you push at your own rhythm, a little faster than the swing?
+J: Some pushes help and some land while it's coming back at me. It goes a bit higher, then drops, then higher again. It never really gets going.
+@fig swing | Push in rhythm and every push adds to the last: the swing climbs and climbs. Push out of rhythm and the helps and hinders take turns, and over time they cancel out.
+N: That might be the most important picture in this chapter, because it means a swing is a ==detector==. It ignores every rhythm except its own. Feed it a jumble of pushes and it responds only to the part of the jumble that matches its rhythm.
+J: So if I wanted to know whether a wiggly line has, say, a 220-times-a-second hand hiding in it...
+N: ...build a swing that loves 220, push it with your wiggly line, and see whether it swings.
+J: That's clever. That's actually clever.
+N: Nature thought of it first. Let's turn it into arithmetic. Here's our job: we have the wiggly line, call it F. We want a little calculation that we can point at any speed, say "three turns per loop", and it hands back how long F's three-turns hand is. If there's no such hand, it should hand back zero.
+J: Then we need a test wave: a pure wave at the speed we're testing. And I'm naming it after the engine I'm trying to catch: `ducati(x)`.
+N: Of course you are. So we have F and `ducati(x)`. What do we do with them?
+J: Add them?
+N: Adding just piles one on top of the other. You'd get a new wiggly line, not an answer.
+J: Subtract?
+N: Same problem. Go back to the swing. When does a push help?
+J: When I push the same way the swing is already moving.
+N: And when does it hurt?
+J: When I push against it.
+N: So at each instant, the effect is push times motion: positive when they agree, negative when they fight. And the swing's total gain is all those little effects added up over time.
+@note This is physics, not just an analogy: the energy a push gives a swing is exactly the push times the swing's speed, added up over time.
+J: So: multiply F by `ducati(x)` at every moment, and add it all up.
+N: That's the whole test. Multiply the two lines point by point, then add up the result over one full loop. And adding up a line over time is just finding the area under it, where area above the axis counts as plus and area below counts as minus.
+J: Why area?
+N: Same reason as on your bike. Ride at 90 km/h for two hours. How far did you go?
+J: 180 kilometres.
+N: Draw your speed against time: a flat line at 90, two hours long. What's the area under it?
+J: 90 times 2 is... 180. The distance is the area!
+N: Adding up something that changes over time is always finding an area. Mathematicians call it ==integration==; I'll keep calling it "adding up". Let's try the test. I'll make an F with two hands inside: a long one spinning twice per loop and a shorter one spinning five times. Then we'll test it for "twice" and for "three times".
+@fig product | The resonance test. Top: our wiggly line F. Middle: two test waves. Bottom: F multiplied by each test wave. When the test speed is inside F (left), the product sits mostly above the line and the area piles up. When it isn't (right), every bit above is matched by a bit below, and the total is exactly zero.
+J: Look at the right-hand one! The coral bits and the blue bits cancel perfectly.
+N: Like pushing the swing out of rhythm: help, hinder, help, hinder, and over a full loop, nothing. And that's true for any two different whole-number speeds. ==Two hands that don't match always cancel out over a loop.==
+J: And the left one doesn't cancel because...
+N: Because the matching part of F, times `ducati(x)`, is the same wave multiplied by itself. What happens when you multiply a number by itself?
+J: It's never negative. Minus times minus is plus.
+N: So the product can't dip below the line. There's nothing to cancel, and the area just grows.
+J: So the test says "zero" for speeds that aren't there, and "something big" for ones that are. How big?
+N: Let's work it out. Suppose the hand inside F has length A, and our test wave has length 1.
+J: Why 1? Can I have 7? It's my lucky number.
+N: You can, but then every answer comes out seven times too big and you'd have to divide the seven back out. A ruler should be marked in ones. Length 1 keeps it honest.
+J: Fine. Length 1.
+N: Then the matching part of the product is A times a pure wave multiplied by itself. So we need to know what a pure wave times itself looks like. Here's a lovely fact.
+@fig sin2 | A pure wave times itself is another wave: twice as fast, never negative, and floating exactly halfway up, at one half. So over a loop, it averages exactly ½.
+J: It's just a wave sitting on the line at a half.
+N: So over a full loop, it averages exactly one half, which means F times `ducati(x)` averages A times a half.
+J: So to get A back, I double the average.
+N: And that's the formula. In words:
+@formula The resonance test, in words | The length of the hand spinning n times per loop  =  2  ×  the average, over one loop, of ( F  ×  a pure wave spinning n times per loop )
+J: That's it? That's the whole machinery?
+N: Almost. You're about to find the hole in it yourself. Try this F: a single hand of length 1, spinning twice per loop, that started a quarter-turn late.
+@fig phase | The hole in the test, and the fix. A hand that starts a quarter-turn late is invisible to the sine test: the product cancels to zero. A second test wave, a quarter-turn ahead, catches it. Together the two readings form an arrow: its length is the hand's length and its angle is where the hand started.
+J: It cancels! There IS a twice-per-loop hand in there, and the test says zero.
+N: The swing again. Push in the right rhythm but at the wrong moment, when the swing is at the very top and not moving. What do your pushes do?
+J: Nothing. It isn't moving, so push times motion is zero.
+N: So timing matters, not just rhythm. The fix is to test twice: once with `ducati(x)`, and once with a copy shifted by a quarter-turn. Mathematicians call the pair ==sine and cosine==. Any hand, whatever its starting point, shows up in one or the other or both.
+J: And then I combine them... the two readings are like "how far east" and "how far north"...
+N: Go on.
+J: So they make an arrow! Its length, by Pythagoras, is the hand's length. And the direction it points is... where the hand started!
+N: That's the phase. And you've just rediscovered why engineers love spinning hands so much: a spinning test hand does both tests at once and gives you the arrow directly. Mathematicians write spinning hands with ==complex numbers==. For our purposes, that's all a complex number is: a neat way to write an arrow that turns.
+J: What about a hand that doesn't spin at all?
+N: Speed zero. It just lifts the whole line up or down. The test for it is the plainest one there is: the average height of F.
+N: Now you've earned the names. The lengths we're measuring are the ==Fourier coefficients==. The test itself, multiply and add up, is called an ==inner product==. And because different whole-number speeds always cancel each other out in the test, mathematicians call them ==orthogonal==, which is the Greek-flavoured word for perpendicular.
+J: Perpendicular? They're wiggly lines, not arrows at right angles.
+N: Hold that thought. In the next chapter I'll show you that they really are at right angles, just in a space with more directions than you can picture.
+@name Fourier coefficient | How long one hand is: the answer the resonance test gives for one speed.
+@textbook For a wiggly line F that repeats every L seconds, textbooks write the length of the n-times-per-loop sine hand as bₙ = (2/L) ∫ F(t) sin(2πnt/L) dt, taken over one loop, and the cosine hand as aₙ = (2/L) ∫ F(t) cos(2πnt/L) dt. The "2/L" is our "double the average". That's all it is.
+N: Now for the thing I promised. You own one of these machines. Two, actually.
+J: I do?
+N: Your ears. Deep inside each one is a snail-shaped tube called the ==cochlea==, about 35 millimetres long if you uncoiled it. Running along it is a membrane that's stiff and narrow at the entrance and wide and floppy at the far end.
+J: Let me guess. Different parts have different natural frequencies.
+N: The entrance responds to high notes, the far end to low ones, and everything in between in order. When a sound arrives, each spot along the membrane shakes hardest for its own hands. About three and a half thousand hair cells sit in a row along it and report how hard their spot is shaking.
+@fig cochlea | Your built-in resonance test. The membrane in the cochlea responds to high pitches near its entrance and low pitches deep in the coil, so each spot along it reports how long one hand is. Position along the spiral is pitch.
+J: So my ear is doing the resonance test. On every sound. All the time.
+N: Something very like it. Hermann von Helmholtz guessed in 1863 that the ear held rows of tiny resonators, like the strings inside a piano. The truth, which won Georg von Békésy a Nobel Prize in 1961, is subtler: a wave rolls along the membrane and peaks at a spot that depends on the pitch. But the upshot is Helmholtz's: position is pitch. That's how you hear a drum and a voice as separate things in one wiggly line. ==Your ear splits the sound into hands before your brain ever sees it.==
+J: And I thought I was just listening.
+@unlock The resonance test | To find the hand spinning n times per loop, multiply the wiggly line by a pure test wave of that speed and add up over one loop. Different speeds cancel to zero and the matching one survives. Double the average to get its length, and test with both sine and cosine to catch where it started.

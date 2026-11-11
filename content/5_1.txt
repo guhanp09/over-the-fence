@@ -1,0 +1,30 @@
+@section 5.1 | The mattress problem | Introduction to groups | You'll discover why no single flip can rotate your mattress through every position, and why your watch can.
+@scene A Sunday in spring. Jim is wrestling a mattress through his bedroom door.
+J: The label says "rotate your mattress regularly so it wears evenly". Every season I forget which way I turned it last time.
+N: How many ways can it lie on the bed?
+J: Soft side up or firm side up, and the head end at the top or the bottom. Four.
+N: And how many moves have you got?
+J: I can spin it end to end, keeping the same side up. I can roll it over the long side. Or I can flop it over the short end.
+N: Three moves, four positions. So here's your dream: one single move that, done every season, takes the mattress through all four positions and back. Then you'd never need to remember anything.
+J: Exactly! Which one?
+@pause Before reading on, try it with a book on the table. Pick any one of the three moves and keep doing it. Does it ever reach all four positions?
+J: Spinning... head at the top, head at the bottom, head at the top again. Only two. Rolling... soft, firm, soft. Two. Flopping... two again! Every move, done twice, puts it back where it started.
+N: So the move you want doesn't exist. Not because you haven't found it, but because it can't. Now look at my watch. One move: "add an hour". Keep doing it.
+J: One, two, three... all the way round to twelve and back to one. One move reaches everything!
+@fig mattress | The mattress's four positions and its three moves. Every move, done twice, brings you back where you started, so no single move can visit all four positions.
+@fig clocks | On a clock, "add 1 hour" reaches every hour. "Add 3 hours" gets stuck on four of them. "Add 5 hours" reaches all twelve again. Steps that share no factor with 12 visit everything.
+J: What about "add 3 hours"?
+N: Try it.
+J: 12, 3, 6, 9, 12... stuck on four hours. And "add 5"? 5, 10, 3, 8, 1, 6, 11, 4, 9, 2, 7, 12. All twelve! And "add 2" only gets the even hours... It works when the step shares no factor with 12!
+N: That's a genuine theorem, and you found it in a minute. Now, the big question: what do a mattress and a clock have in common?
+J: They both have... moves. You can do one move after another. You can undo any move. And there's the "do nothing" move.
+N: That's it: a collection of moves where you can combine any two, undo any one, and there's a do-nothing move. Mathematicians call it a ==group==. The clock's group is called ==cyclic==, because a single move cycles through everything. The mattress's group is called the Klein four-group, after Felix Klein.
+@name Group | A collection of moves you can combine, undo, and choose not to make, where combining behaves consistently.
+J: So both of them are groups, but they're different shapes of group.
+N: And the shape tells you what's possible before you ever lift the mattress. That's the power of the idea: ==you don't need to try every sequence of moves. The structure tells you what can and can't be done.==
+@side Group theory in the bedroom | The mathematician and writer Brian Hayes wrote an essay with exactly this title in 2005, working out the mattress problem properly. Since no single move works, the practical fix is to alternate two moves: say, spin in spring and autumn and roll in summer and winter. Those two together do visit all four positions.
+J: What's the biggest clock?
+N: A clock with infinitely many ticks: a circle you can turn by any amount at all. That's the group of the spinning hands from Chapter 1. Every hand, turning steadily, is walking round that infinite clock.
+J: So Fourier series are about a group too?
+N: Deep down, yes. There's a whole field that does Fourier analysis on any group you like. But first, let's learn the grammar of moves.
+@unlock Moves have structure | A group is a set of moves you can combine and undo, with a do-nothing move. The clock is cyclic: one move reaches everything. The mattress isn't: every move undoes itself. The structure decides what's possible before you try.

@@ -1,0 +1,36 @@
+@section 4.2 | Hunting eigenvectors | Developing the mathematical architecture for eigenvectors | You'll learn two ways to find a transformation's own directions: a lazy one and a clever one.
+@scene Saturday. The pizza was eaten. The smiley, now a long thin line, was eaten last.
+J: I kept rolling the dough, left to right, over and over. The smiley ended up a single stripe along the roll.
+N: You've discovered the lazy way to find an eigenvector. Let's make it a bit more interesting than pizza. Here's a transformation I'll call `roll(v)`: it takes an arrow and gives back a new one. The new "east" is twice the old east plus the old north. The new "north" is the old east plus twice the old north.
+J: That's a sort of slanted stretch.
+N: Watch what happens to any arrow if you apply `roll(v)` again and again, rescaling each time so it fits on the page.
+@fig power | Apply the same transformation over and over, and every starting arrow swings towards one direction: here, the diagonal. That direction is the transformation's strongest eigenvector.
+J: Every arrow swings towards the diagonal. Like my smiley becoming a stripe.
+N: Because each time you roll, the part along the strongest direction gets stretched more than everything else, so it takes over. That's the lazy method: keep applying it and see where things end up. Mathematicians call it ==power iteration==, and it's more than lazy. As you'll see tomorrow, it's how Google ranked the entire web.
+J: But it only finds the strongest one. What about the others?
+N: For that we need the clever way. Suppose `v` is an eigenvector with stretch factor λ.
+J: λ?
+N: The Greek letter "lambda". Mathematicians use it for eigenvalues the way you used `ducati(x)` for test waves. So `roll(v)` is just λ times `v`. Now subtract: what does "`roll` minus λ-stretch" do to `v`?
+J: `roll` stretches it by λ, and then I take away λ times it... nothing's left. It sends `v` to zero.
+N: So "`roll` minus λ" squashes a whole direction down to nothing. Picture what that does to the plane.
+J: If one whole direction gets crushed to a point, everything gets flattened. The plane collapses onto a line.
+N: And what's the area of a flattened square?
+J: Zero!
+@fig collapse | For the right value of λ (here 3), "roll minus λ" crushes one direction to nothing, and the whole plane collapses onto a line. A flat shape has zero area, and that's how you find λ.
+N: So here's the clever hunt: ==look for the values of λ that make "roll minus λ" squash area to zero.== And there's a neat formula for how much a transformation scales area. If it sends east to (a, c) and north to (b, d), areas get multiplied by a times d minus b times c.
+J: For "`roll` minus λ", east goes to (2 − λ, 1) and north to (1, 2 − λ). So the area factor is (2 − λ) times (2 − λ), minus 1.
+N: Set it to zero.
+J: (2 − λ) squared equals 1. So 2 − λ is 1 or −1... λ is 1 or 3!
+N: Two eigenvalues. Now find the directions.
+J: For λ = 3, the diagonal: (1, 1) becomes (3, 3). Stretched by 3. For λ = 1... (1, −1) becomes (2 − 1, 1 − 2), which is (1, −1). Untouched!
+@fig rollgrid | The grid before and after roll(v). The diagonal (coral) is stretched three times, the anti-diagonal (teal) doesn't move, and the yellow square's area grows three-fold, which is 3 × 1.
+N: And the area factor of `roll` itself?
+J: 2 times 2 minus 1 times 1 is 3. The same as 3 times 1. The area stretch is just the two eigenvalues multiplied together!
+N: It always is. The area-scaling number is called the ==determinant==, and the equation you just solved, "area of roll minus λ equals zero", is the ==characteristic equation==. You've done in five minutes what takes most students a week.
+@textbook Textbooks write a transformation as a matrix A and an eigenvector as Av = λv. The eigenvalues solve det(A − λI) = 0, where det is the determinant (the area factor) and I is the do-nothing transformation. For our roll, A = [[2, 1], [1, 2]], giving λ = 3 and λ = 1.
+J: And why bother, if the lazy way works?
+N: The lazy way only finds the strongest. The clever way finds them all. And once you have them all, any arrow can be split into eigen-directions, like splitting a song into hands, and then `roll` is trivial: multiply one part by 3, leave the other alone.
+J: So eigenvectors are a basis in which the transformation is simple.
+N: That's the best one-sentence summary of this whole chapter. Chapter 2 said: choose the language in which your problem is simple. For a transformation, that language is its eigenvectors.
+@name Determinant | How much a transformation scales area. It's zero exactly when something gets squashed flat.
+@unlock Two ways to hunt | Lazy way: keep applying the transformation and see which direction takes over (power iteration). Clever way: find the λ where "transformation minus λ" squashes area to zero (the characteristic equation). In its eigenvector basis, every transformation is just a set of stretches.
