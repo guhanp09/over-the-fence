@@ -2,7 +2,7 @@
 
 **Big ideas in mathematics, one neighbourly conversation at a time.**
 
-An illustrated book by Guhan Purushothaman: 121 pages, seven university-level mathematical themes, and 68 custom illustrations. The source combines dialogue, everyday analogies and original programmatic SVG figures.
+An illustrated book by Guhan Purushothaman: 121 pages, seven university-level mathematical themes, and 65 programmatic figures alongside chapter illustrations. The source combines dialogue, everyday analogies and original programmatic SVG figures.
 
 [Read the book (PDF)](Over-the-Fence.pdf)
 
